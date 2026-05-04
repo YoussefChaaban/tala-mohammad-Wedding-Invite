@@ -35,7 +35,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative px-14 sm:px-24 py-28 sm:py-32">{children}</div>
+      <div className="relative px-16 sm:px-28 py-36 sm:py-40">{children}</div>
     </div>
   );
 }
@@ -68,7 +68,7 @@ function Index() {
                 بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
               </p>
 
-              <p className="font-arabic text-xs sm:text-sm text-foreground/80 leading-loose px-2">
+              <p className="font-arabic text-xs sm:text-sm text-foreground/80 leading-loose mx-auto max-w-md text-center" dir="rtl">
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
               </p>
 
@@ -77,12 +77,12 @@ function Index() {
               {/* Parents */}
               <div className="grid grid-cols-2 gap-4 sm:gap-10 text-center">
                 <div>
-                  <p className="font-arabic-display text-xl sm:text-2xl text-[#A48347] leading-tight">
+                  <p className="font-arabic-display text-2xl sm:text-3xl text-[#A48347] leading-tight">
                     علي وميرنا شعبان
                   </p>
                 </div>
                 <div>
-                  <p className="font-arabic-display text-xl sm:text-2xl text-[#A48347] leading-tight">
+                  <p className="font-arabic-display text-2xl sm:text-3xl text-[#A48347] leading-tight">
                     حسين وخولا الزير
                   </p>
                 </div>
