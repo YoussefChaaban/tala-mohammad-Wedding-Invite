@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
 function GoldDivider({ className = "" }: { className?: string }) {
   return (
     <div className={`gold-divider ${className}`}>
-      <span className="text-base">❖</span>
+      <span className="text-sm">❖</span>
     </div>
   );
 }
@@ -35,7 +35,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative px-10 sm:px-16 py-16 sm:py-20">{children}</div>
+      <div className="relative px-12 sm:px-20 py-20 sm:py-24">{children}</div>
     </div>
   );
 }
@@ -44,47 +44,51 @@ function Index() {
   return (
     <main className="min-h-screen bg-[var(--ivory)] overflow-x-hidden">
       {/* HERO */}
-      <section className="relative pt-16 pb-24 px-6">
+      <section className="relative pt-12 pb-24 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <img
             src={monogram}
             alt="Monogram"
             width={120}
             height={160}
-            className="mx-auto w-20 sm:w-24 animate-fade-up"
+            className="mx-auto w-16 sm:w-20 animate-fade-up"
           />
-          <p className="mt-10 text-xs sm:text-sm tracking-[0.5em] uppercase text-gold/80 animate-fade-up">
+          <p className="mt-8 text-[10px] sm:text-xs tracking-[0.5em] uppercase text-gold/80 animate-fade-up">
             Together with their families
           </p>
-          <p className="mt-2 font-arabic text-base text-gold/80 animate-fade-up" style={{ animationDelay: ".1s" }}>
+          <p className="mt-2 font-arabic text-sm text-gold/80 animate-fade-up" style={{ animationDelay: ".1s" }}>
             بدعوة من عائلتيهما
           </p>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10">
           <Card>
-            <div className="text-center space-y-8">
-              <p className="font-arabic-display text-2xl sm:text-3xl text-gold leading-loose">
+            <div className="text-center space-y-6">
+              <p className="font-arabic-display text-xl sm:text-2xl text-gold leading-loose">
                 بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
               </p>
 
-              <p className="font-arabic text-sm sm:text-base text-foreground/80 leading-loose px-2">
+              <p className="font-arabic text-xs sm:text-sm text-foreground/80 leading-loose px-2">
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
               </p>
 
               <GoldDivider />
 
               {/* Parents */}
-              <div className="grid grid-cols-2 gap-6 sm:gap-12 text-center">
+              <div className="grid grid-cols-2 gap-4 sm:gap-10 text-center">
                 <div>
-                  <p className="text-xs tracking-[0.3em] uppercase text-gold/70 mb-2">Parents of the Bride</p>
-                  <p className="font-arabic text-xl sm:text-2xl text-gold-deep leading-relaxed">
+                  <p className="font-script-bold text-2xl sm:text-3xl text-gold-deep leading-tight">
+                    Ali &amp; Mirna Shaaban
+                  </p>
+                  <p className="mt-1 font-arabic text-base sm:text-lg text-gold-deep">
                     علي وميرنا شعبان
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs tracking-[0.3em] uppercase text-gold/70 mb-2">Parents of the Groom</p>
-                  <p className="font-arabic text-xl sm:text-2xl text-gold-deep leading-relaxed">
+                  <p className="font-script-bold text-2xl sm:text-3xl text-gold-deep leading-tight">
+                    Hussein &amp; Khawla Al Zir
+                  </p>
+                  <p className="mt-1 font-arabic text-base sm:text-lg text-gold-deep">
                     حسين وخولا الزير
                   </p>
                 </div>
@@ -92,47 +96,46 @@ function Index() {
 
               <GoldDivider />
 
-              <div className="space-y-3">
-                <p className="font-display text-lg sm:text-xl text-foreground/70 italic">
-                  request the honor of your presence
+              <div className="space-y-2">
+                <p className="font-display text-base sm:text-lg text-foreground/70 italic leading-snug">
+                  request the honor of your presence at the wedding of
                 </p>
-                <p className="font-arabic text-sm sm:text-base text-foreground/70">
+                <p className="font-arabic text-xs sm:text-sm text-foreground/70">
                   يسرّهما دعوتكم لحضور حفل زفاف ابنيهما
                 </p>
               </div>
 
               {/* Names calligraphy */}
-              <div className="py-4">
+              <div className="py-2">
                 <img
                   src={names}
-                  alt="محمد و تالا — Mohammad & Tala"
+                  alt="محمد و تالة — Mohammad & Tala"
                   width={1280}
                   height={640}
-                  className="mx-auto w-full max-w-md"
+                  className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-4 font-display text-3xl sm:text-4xl tracking-[0.15em] text-gold-deep">
-                  Mohammad <span className="text-gold/60 mx-2">&</span> Tala
+                <p className="mt-3 font-script text-4xl sm:text-5xl text-[#A48347] leading-none">
+                  Mohammad <span className="text-[#A48347]/70">&amp;</span> Tala
                 </p>
               </div>
 
-              <div className="space-y-2">
-                <p className="font-display text-base sm:text-lg italic text-foreground/70">
+              <div>
+                <p className="font-display text-sm sm:text-base italic text-foreground/70">
                   to celebrate the beginning of their journey together
                 </p>
-                <p className="font-arabic text-sm text-foreground/70">و ذلك بمشيئة الله تعالى</p>
               </div>
 
               <GoldDivider />
 
-              <div className="grid grid-cols-2 gap-4 pt-2">
+              <div className="grid grid-cols-2 gap-4 pt-1">
                 <div>
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-2">Date</p>
-                  <p className="font-display text-xl text-gold-deep">October 31</p>
-                  <p className="font-display text-base text-gold-deep">2026 · 6:00 PM</p>
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
+                  <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
+                  <p className="font-display text-sm text-gold-deep">2026 · 6:00 PM</p>
                 </div>
                 <div>
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-2">Venue</p>
-                  <p className="font-display text-base text-gold-deep leading-tight">Swaneset Bay<br/>Resort & Country Club</p>
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Venue</p>
+                  <p className="font-display text-sm text-gold-deep leading-tight">Swaneset Bay<br/>Resort &amp; Country Club</p>
                 </div>
               </div>
             </div>
@@ -144,18 +147,16 @@ function Index() {
               aria-hidden
               width={140}
               height={140}
-              className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-24 sm:w-28 animate-seal drop-shadow-[0_8px_20px_rgba(120,80,20,0.35)]"
+              className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-20 sm:w-24 animate-seal drop-shadow-[0_8px_20px_rgba(120,80,20,0.35)]"
             />
           </Card>
         </div>
       </section>
 
       {/* COUNTDOWN */}
-      <section className="px-6 py-24 sm:py-32">
+      <section className="px-6 py-24 sm:py-28">
         <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Counting the moments</p>
-          <p className="mt-2 font-arabic text-base text-gold/70">العد التنازلي</p>
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl text-gold-deep">Until We Say I Do</h2>
+          <h2 className="font-script text-5xl sm:text-6xl text-gold-deep">Days Left</h2>
           <GoldDivider className="mt-6" />
         </div>
         <Countdown />
@@ -165,8 +166,7 @@ function Index() {
       <section className="px-6 py-20">
         <div className="text-center mb-10">
           <p className="text-xs tracking-[0.5em] uppercase text-gold/80">The Venue</p>
-          <p className="mt-2 font-arabic text-base text-gold/70">المكان</p>
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl text-gold-deep">Swaneset Bay Resort</h2>
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">Swaneset Bay Resort &amp; Country Club</h2>
           <GoldDivider className="mt-6" />
         </div>
 
@@ -206,9 +206,8 @@ function Index() {
         <div className="mx-auto max-w-xl text-center border-y border-[var(--gold-soft)]/40 py-12">
           <p className="text-base">❖</p>
           <p className="mt-4 text-xs tracking-[0.5em] uppercase text-gold">An Adults-Only Celebration</p>
-          <p className="mt-3 font-arabic text-sm text-gold/80">حفل للكبار فقط</p>
           <p className="mt-6 font-display italic text-foreground/70 leading-relaxed">
-            While we love your little ones, we kindly request this be an evening just for the grown-ups.
+            While we love your little ones, we kindly request this be an adult only event.
           </p>
         </div>
       </section>
@@ -227,7 +226,7 @@ function Index() {
             <div className="text-center sm:text-right space-y-2">
               <p className="font-display text-2xl text-gold-deep">RSVP</p>
               <p className="text-xs tracking-[0.3em] uppercase text-gold/70">Mohammad & Tala</p>
-              <p className="font-arabic text-sm text-gold/80">محمد و تالا</p>
+              <p className="font-arabic text-sm text-gold/80">محمد و تالة</p>
             </div>
             <div className="hidden sm:block w-px h-24 bg-[var(--gold-soft)]/50" />
             <div className="text-center sm:text-left space-y-4">
@@ -245,13 +244,6 @@ function Index() {
 
       {/* GALLERY */}
       <section className="px-6 py-20">
-        <div className="text-center mb-12">
-          <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Memories</p>
-          <p className="mt-2 font-arabic text-base text-gold/70">ذكرياتنا</p>
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl text-gold-deep">Our Gallery</h2>
-          <GoldDivider className="mt-6" />
-        </div>
-
         <div className="mx-auto max-w-md">
           <div className="relative">
             <img src={border} alt="" aria-hidden className="absolute inset-0 w-full h-full object-fill pointer-events-none" />
@@ -272,9 +264,8 @@ function Index() {
       {/* FOOTER */}
       <footer className="px-6 py-16 text-center">
         <img src={monogram} alt="" aria-hidden width={80} height={120} className="mx-auto w-14 opacity-80" />
-        <p className="mt-6 font-display text-lg text-gold-deep tracking-[0.3em]">M & T</p>
-        <p className="mt-2 font-arabic text-sm text-gold/70">٢٠٢٦ · بمشيئة الله</p>
-        <p className="mt-1 text-[10px] tracking-[0.4em] uppercase text-gold/60">October 31 · 2026</p>
+        <p className="mt-6 font-script text-3xl text-gold-deep">M &amp; T</p>
+        <p className="mt-2 text-[10px] tracking-[0.4em] uppercase text-gold/60">October 31 · 2026</p>
       </footer>
     </main>
   );
