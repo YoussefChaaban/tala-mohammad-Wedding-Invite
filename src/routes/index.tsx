@@ -35,7 +35,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative px-12 sm:px-20 py-20 sm:py-24">{children}</div>
+      <div className="relative px-14 sm:px-24 py-28 sm:py-32">{children}</div>
     </div>
   );
 }
@@ -77,18 +77,12 @@ function Index() {
               {/* Parents */}
               <div className="grid grid-cols-2 gap-4 sm:gap-10 text-center">
                 <div>
-                  <p className="font-script-bold text-2xl sm:text-3xl text-gold-deep leading-tight">
-                    Ali &amp; Mirna Shaaban
-                  </p>
-                  <p className="mt-1 font-arabic text-base sm:text-lg text-gold-deep">
+                  <p className="font-arabic-display text-xl sm:text-2xl text-[#A48347] leading-tight">
                     علي وميرنا شعبان
                   </p>
                 </div>
                 <div>
-                  <p className="font-script-bold text-2xl sm:text-3xl text-gold-deep leading-tight">
-                    Hussein &amp; Khawla Al Zir
-                  </p>
-                  <p className="mt-1 font-arabic text-base sm:text-lg text-gold-deep">
+                  <p className="font-arabic-display text-xl sm:text-2xl text-[#A48347] leading-tight">
                     حسين وخولا الزير
                   </p>
                 </div>
@@ -114,8 +108,8 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-3 font-script text-4xl sm:text-5xl text-[#A48347] leading-none">
-                  Mohammad <span className="text-[#A48347]/70">&amp;</span> Tala
+                <p className="mt-3 font-alex text-5xl sm:text-6xl text-[#A48347] leading-none">
+                  Mohammad <span className="text-[#A48347]/80">&amp;</span> Tala
                 </p>
               </div>
 
@@ -230,7 +224,7 @@ function Index() {
             </div>
             <div className="hidden sm:block w-px h-24 bg-[var(--gold-soft)]/50" />
             <div className="text-center sm:text-left space-y-4">
-              <p className="text-sm text-foreground/70 italic">Please respond by September 30, 2026</p>
+              <p className="text-sm text-foreground/70 italic">Please respond by September 20, 2026</p>
               <a
                 href="#"
                 className="inline-block px-8 py-3 bg-[var(--gold-deep)] text-[var(--ivory)] text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] transition-all duration-500"
