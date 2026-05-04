@@ -7,6 +7,7 @@ import monogram from "@/assets/monogram.png";
 import venue from "@/assets/venue-painterly.png";
 import parentsTala from "@/assets/parents-tala.png";
 import parentsMohammad from "@/assets/parents-mohammad.png";
+import parentsAnd from "@/assets/parents-and.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -92,21 +93,22 @@ function Index() {
               <GoldDivider />
 
               {/* Parents */}
-              <div className="grid grid-cols-2 gap-4 sm:gap-8 items-center">
-                <div className="flex justify-center">
-                  <img
-                    src={parentsTala}
-                    alt="علي وميرنا شعبان"
-                    className="w-full max-w-[12rem] sm:max-w-[14rem] h-auto mix-blend-multiply"
-                  />
-                </div>
-                <div className="flex justify-center">
-                  <img
-                    src={parentsMohammad}
-                    alt="حسين وخولا الزير"
-                    className="w-full max-w-[12rem] sm:max-w-[14rem] h-auto mix-blend-multiply"
-                  />
-                </div>
+              <div className="flex items-center justify-center gap-3 sm:gap-5" dir="rtl">
+                <img
+                  src={parentsTala}
+                  alt="علي وميرنا شعبان"
+                  className="h-14 sm:h-16 w-auto"
+                />
+                <img
+                  src={parentsAnd}
+                  alt="و"
+                  className="h-8 sm:h-10 w-auto"
+                />
+                <img
+                  src={parentsMohammad}
+                  alt="حسين وخولا الزير"
+                  className="h-14 sm:h-16 w-auto"
+                />
               </div>
 
               <GoldDivider />
@@ -142,7 +144,7 @@ function Index() {
 
               <GoldDivider />
 
-              <div className="grid grid-cols-2 gap-4 -mt-2">
+              <div className="mx-auto max-w-md grid grid-cols-2 gap-6 -mt-2">
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
                   <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
