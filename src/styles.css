@@ -97,6 +97,8 @@
   .font-arabic { font-family: var(--font-arabic); direction: rtl; }
   .font-arabic-display { font-family: var(--font-arabic-display); direction: rtl; }
   .font-display { font-family: var(--font-display); }
+  .font-script { font-family: 'Pinyon Script', cursive; }
+  .font-script-bold { font-family: 'Great Vibes', cursive; }
 
   .gold-divider {
     display: flex;
