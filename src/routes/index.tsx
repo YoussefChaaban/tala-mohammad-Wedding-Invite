@@ -11,9 +11,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Mohammad & Tala — October 31, 2026" },
-      { name: "description", content: "The wedding of Mohammad & Tala — October 31, 2026 at Swaneset Bay Resort, Pitt Meadows, BC." },
+      {
+        name: "description",
+        content:
+          "The wedding of Mohammad & Tala — October 31, 2026 at Swaneset Bay Resort, Pitt Meadows, BC.",
+      },
       { property: "og:title", content: "Mohammad & Tala — Wedding Invitation" },
-      { property: "og:description", content: "Join us in celebrating our wedding on October 31, 2026." },
+      {
+        property: "og:description",
+        content: "Join us in celebrating our wedding on October 31, 2026.",
+      },
     ],
   }),
 });
@@ -35,7 +42,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative px-16 sm:px-28 py-36 sm:py-40">{children}</div>
+      <div className="relative px-16 sm:px-28 pt-36 sm:pt-40 pb-44 sm:pb-48">{children}</div>
     </div>
   );
 }
@@ -56,20 +63,28 @@ function Index() {
           <p className="mt-8 text-[10px] sm:text-xs tracking-[0.5em] uppercase text-gold/80 animate-fade-up">
             Together with their families
           </p>
-          <p className="mt-2 font-arabic text-sm text-gold/80 animate-fade-up" style={{ animationDelay: ".1s" }}>
+          <p
+            className="mt-2 font-arabic text-sm text-gold/80 animate-fade-up"
+            style={{ animationDelay: ".1s" }}
+          >
             بدعوة من عائلتيهما
           </p>
         </div>
 
         <div className="mt-10">
           <Card>
-            <div className="text-center space-y-6">
+            <div className="text-center space-y-5">
               <p className="font-arabic-display text-xl sm:text-2xl text-gold leading-loose">
                 بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
               </p>
 
-              <p className="font-arabic text-xs sm:text-sm text-foreground/80 leading-loose mx-auto max-w-md text-center" dir="rtl">
-                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+              <p
+                className="font-arabic text-xs sm:text-sm text-foreground/80 leading-loose mx-auto max-w-[25rem] text-center px-1"
+                dir="rtl"
+              >
+                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
+                إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ
+                لِّقَوْمٍ يَتَفَكَّرُونَ
               </p>
 
               <GoldDivider />
@@ -77,12 +92,12 @@ function Index() {
               {/* Parents */}
               <div className="grid grid-cols-2 gap-4 sm:gap-10 text-center">
                 <div>
-                  <p className="font-arabic-display text-2xl sm:text-3xl text-[#A48347] leading-tight">
+                  <p className="font-arabic-calligraphy text-2xl sm:text-3xl text-gold-deep leading-tight">
                     علي وميرنا شعبان
                   </p>
                 </div>
                 <div>
-                  <p className="font-arabic-display text-2xl sm:text-3xl text-[#A48347] leading-tight">
+                  <p className="font-arabic-calligraphy text-2xl sm:text-3xl text-gold-deep leading-tight">
                     حسين وخولا الزير
                   </p>
                 </div>
@@ -121,7 +136,7 @@ function Index() {
 
               <GoldDivider />
 
-              <div className="grid grid-cols-2 gap-4 pt-1">
+              <div className="grid grid-cols-2 gap-4 -mt-2">
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
                   <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
@@ -129,7 +144,11 @@ function Index() {
                 </div>
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Venue</p>
-                  <p className="font-display text-sm text-gold-deep leading-tight">Swaneset Bay<br/>Resort &amp; Country Club</p>
+                  <p className="font-display text-sm text-gold-deep leading-tight">
+                    Swaneset Bay
+                    <br />
+                    Resort &amp; Country Club
+                  </p>
                 </div>
               </div>
             </div>
@@ -160,7 +179,9 @@ function Index() {
       <section className="px-6 py-20">
         <div className="text-center mb-10">
           <p className="text-xs tracking-[0.5em] uppercase text-gold/80">The Venue</p>
-          <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">Swaneset Bay Resort &amp; Country Club</h2>
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">
+            Swaneset Bay Resort &amp; Country Club
+          </h2>
           <GoldDivider className="mt-6" />
         </div>
 
@@ -180,7 +201,9 @@ function Index() {
 
           <div className="mt-8 text-center space-y-3">
             <p className="font-display text-xl text-gold-deep">16651 Rannie Road</p>
-            <p className="text-foreground/70 text-sm tracking-wider">Pitt Meadows, British Columbia</p>
+            <p className="text-foreground/70 text-sm tracking-wider">
+              Pitt Meadows, British Columbia
+            </p>
             <div className="pt-4">
               <a
                 href="https://maps.google.com/?q=Swaneset+Bay+Resort+%26+Country+Club+Pitt+Meadows"
@@ -199,7 +222,9 @@ function Index() {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-xl text-center border-y border-[var(--gold-soft)]/40 py-12">
           <p className="text-base">❖</p>
-          <p className="mt-4 text-xs tracking-[0.5em] uppercase text-gold">An Adults-Only Celebration</p>
+          <p className="mt-4 text-xs tracking-[0.5em] uppercase text-gold">
+            An Adults-Only Celebration
+          </p>
           <p className="mt-6 font-display italic text-foreground/70 leading-relaxed">
             While we love your little ones, we kindly request this be an adult only event.
           </p>
@@ -224,7 +249,9 @@ function Index() {
             </div>
             <div className="hidden sm:block w-px h-24 bg-[var(--gold-soft)]/50" />
             <div className="text-center sm:text-left space-y-4">
-              <p className="text-sm text-foreground/70 italic">Please respond by September 20, 2026</p>
+              <p className="text-sm text-foreground/70 italic">
+                Please respond by September 20, 2026
+              </p>
               <a
                 href="#"
                 className="inline-block px-8 py-3 bg-[var(--gold-deep)] text-[var(--ivory)] text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] transition-all duration-500"
@@ -240,14 +267,21 @@ function Index() {
       <section className="px-6 py-20">
         <div className="mx-auto max-w-md">
           <div className="relative">
-            <img src={border} alt="" aria-hidden className="absolute inset-0 w-full h-full object-fill pointer-events-none" />
+            <img
+              src={border}
+              alt=""
+              aria-hidden
+              className="absolute inset-0 w-full h-full object-fill pointer-events-none"
+            />
             <div className="relative p-12 aspect-[3/4] flex items-center justify-center">
               <div className="w-full h-full border border-[var(--gold-soft)]/40 flex items-center justify-center bg-[var(--cream)]/30">
                 <div className="text-center px-6">
                   <p className="font-display text-2xl text-gold-deep italic">Coming Soon</p>
                   <p className="mt-3 font-arabic text-sm text-gold/70">قريباً</p>
                   <div className="mt-4 mx-auto w-16 h-px bg-[var(--gold-soft)]" />
-                  <p className="mt-4 text-[10px] tracking-[0.4em] uppercase text-gold/70">A portrait awaits</p>
+                  <p className="mt-4 text-[10px] tracking-[0.4em] uppercase text-gold/70">
+                    A portrait awaits
+                  </p>
                 </div>
               </div>
             </div>
@@ -257,9 +291,18 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="px-6 py-16 text-center">
-        <img src={monogram} alt="" aria-hidden width={80} height={120} className="mx-auto w-14 opacity-80" />
+        <img
+          src={monogram}
+          alt=""
+          aria-hidden
+          width={80}
+          height={120}
+          className="mx-auto w-14 opacity-80"
+        />
         <p className="mt-6 font-script text-3xl text-gold-deep">M &amp; T</p>
-        <p className="mt-2 text-[10px] tracking-[0.4em] uppercase text-gold/60">October 31 · 2026</p>
+        <p className="mt-2 text-[10px] tracking-[0.4em] uppercase text-gold/60">
+          October 31 · 2026
+        </p>
       </footer>
     </main>
   );
