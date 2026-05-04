@@ -113,7 +113,6 @@ function Index() {
                   width={1280}
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
-                  style={{ filter: 'brightness(0) saturate(100%) invert(54%) sepia(34%) saturate(602%) hue-rotate(2deg) brightness(92%) contrast(86%)' }}
                 />
                 <p className="mt-3 font-script text-4xl sm:text-5xl text-[#A48347] leading-none">
                   Mohammad <span className="text-[#A48347]/70">&amp;</span> Tala
