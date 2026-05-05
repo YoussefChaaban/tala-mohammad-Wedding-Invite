@@ -94,21 +94,11 @@ function Index() {
               <GoldDivider />
 
               {/* Parents */}
-              <div className="flex items-center justify-center gap-4 sm:gap-6" dir="rtl">
+              <div className="flex justify-center">
                 <img
-                  src={parentsTala}
-                  alt="علي وميرنا شعبان"
-                  className="h-20 sm:h-24 w-auto"
-                />
-                <img
-                  src={parentsAnd}
-                  alt="و"
-                  className="h-10 sm:h-12 w-auto"
-                />
-                <img
-                  src={parentsMohammad}
-                  alt="حسين وخولا الزير"
-                  className="h-20 sm:h-24 w-auto"
+                  src={parentsFull}
+                  alt="علي وميرنا شعبان و حسين وخولا الزير"
+                  className="w-full max-w-sm sm:max-w-md h-auto"
                 />
               </div>
 
