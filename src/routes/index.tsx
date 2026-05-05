@@ -105,7 +105,7 @@ function Index() {
                 <img
                   src={parentsAnd}
                   alt="و"
-                  className="h-6 sm:h-8 w-auto"
+                  className="h-10 sm:h-12 w-auto"
                 />
                 <img
                   src={parentsMohammad}
