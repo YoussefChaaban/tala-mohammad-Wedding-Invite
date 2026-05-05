@@ -8,6 +8,7 @@ import venue from "@/assets/venue-painterly.png";
 import parentsTala from "@/assets/parents-tala.png";
 import parentsMohammad from "@/assets/parents-mohammad.png";
 import parentsAnd from "@/assets/parents-and.png";
+import bismillah from "@/assets/bismillah-calligraphy.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -77,9 +78,11 @@ function Index() {
         <div className="mt-10">
           <Card>
             <div className="text-center space-y-5">
-              <p className="font-arabic-display text-xl sm:text-2xl text-gold leading-loose">
-                بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
-              </p>
+              <img
+                src={bismillah}
+                alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
+                className="mx-auto w-full max-w-xs sm:max-w-sm"
+              />
 
               <p
                 className="font-arabic text-xs sm:text-sm text-foreground/80 leading-loose mx-auto max-w-[25rem] text-center px-1"
@@ -93,21 +96,21 @@ function Index() {
               <GoldDivider />
 
               {/* Parents */}
-              <div className="flex items-center justify-center gap-3 sm:gap-5" dir="rtl">
+              <div className="flex items-center justify-center gap-4 sm:gap-6" dir="rtl">
                 <img
                   src={parentsTala}
                   alt="علي وميرنا شعبان"
-                  className="h-14 sm:h-16 w-auto"
+                  className="h-20 sm:h-24 w-auto"
                 />
                 <img
                   src={parentsAnd}
                   alt="و"
-                  className="h-8 sm:h-10 w-auto"
+                  className="h-6 sm:h-8 w-auto"
                 />
                 <img
                   src={parentsMohammad}
                   alt="حسين وخولا الزير"
-                  className="h-14 sm:h-16 w-auto"
+                  className="h-20 sm:h-24 w-auto"
                 />
               </div>
 
@@ -131,8 +134,12 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-3 font-alex text-5xl sm:text-6xl text-[#A48347] leading-none">
-                  Mohammad <span className="text-[#A48347]/80">&amp;</span> Tala
+                <p className="mt-3 font-alex text-4xl sm:text-5xl text-[#A48347] leading-tight">
+                  Mohammad
+                  <br />
+                  <span className="text-[#A48347]/80">&amp;</span>
+                  <br />
+                  Tala
                 </p>
               </div>
 
@@ -144,7 +151,7 @@ function Index() {
 
               <GoldDivider />
 
-              <div className="mx-auto max-w-md grid grid-cols-2 gap-6 -mt-2">
+              <div className="mx-auto max-w-xs grid grid-cols-2 gap-4 -mt-2">
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
                   <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
