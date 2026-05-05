@@ -5,9 +5,7 @@ import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
 import monogram from "@/assets/monogram.png";
 import venue from "@/assets/venue-painterly.png";
-import parentsTala from "@/assets/parents-tala.png";
-import parentsMohammad from "@/assets/parents-mohammad.png";
-import parentsAnd from "@/assets/parents-and.png";
+import parentsFull from "@/assets/parents-full.png";
 import bismillah from "@/assets/bismillah-calligraphy.png";
 
 export const Route = createFileRoute("/")({
@@ -96,21 +94,11 @@ function Index() {
               <GoldDivider />
 
               {/* Parents */}
-              <div className="flex items-center justify-center gap-4 sm:gap-6" dir="rtl">
+              <div className="flex justify-center">
                 <img
-                  src={parentsTala}
-                  alt="علي وميرنا شعبان"
-                  className="h-20 sm:h-24 w-auto"
-                />
-                <img
-                  src={parentsAnd}
-                  alt="و"
-                  className="h-10 sm:h-12 w-auto"
-                />
-                <img
-                  src={parentsMohammad}
-                  alt="حسين وخولا الزير"
-                  className="h-20 sm:h-24 w-auto"
+                  src={parentsFull}
+                  alt="علي وميرنا شعبان و حسين وخولا الزير"
+                  className="w-full max-w-sm sm:max-w-md h-auto"
                 />
               </div>
 
