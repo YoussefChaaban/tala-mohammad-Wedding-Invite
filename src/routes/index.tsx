@@ -5,9 +5,7 @@ import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
 import monogram from "@/assets/monogram.png";
 import venue from "@/assets/venue-painterly.png";
-import parentsTala from "@/assets/parents-tala.png";
-import parentsMohammad from "@/assets/parents-mohammad.png";
-import parentsAnd from "@/assets/parents-and.png";
+import parentsFull from "@/assets/parents-full.png";
 import bismillah from "@/assets/bismillah-calligraphy.png";
 
 export const Route = createFileRoute("/")({
