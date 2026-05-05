@@ -98,7 +98,7 @@ function Index() {
                 <img
                   src={parentsFull}
                   alt="علي وميرنا شعبان و حسين وخولا الزير"
-                  className="w-full max-w-sm sm:max-w-md h-auto"
+                  className="w-full max-w-[14rem] sm:max-w-xs h-auto"
                 />
               </div>
 
