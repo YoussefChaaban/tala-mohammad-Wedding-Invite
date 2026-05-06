@@ -79,7 +79,7 @@ function Index() {
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-                className="mx-auto w-full max-w-xs sm:max-w-sm"
+                className="mx-auto w-full max-w-[14rem] sm:max-w-[17rem]"
               />
 
               <p
@@ -114,7 +114,7 @@ function Index() {
               </div>
 
               {/* Names calligraphy */}
-              <div className="py-2">
+              <div className="-mt-2">
                 <img
                   src={names}
                   alt="محمد و تالة — Mohammad & Tala"
@@ -122,7 +122,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-3 font-alex text-4xl sm:text-5xl text-[#A48347] leading-tight">
+                <p className="mt-1 font-alex text-4xl sm:text-5xl text-[#A48347] leading-tight text-center">
                   Mohammad
                   <br />
                   <span className="text-[#A48347]/80">&amp;</span>
@@ -131,15 +131,15 @@ function Index() {
                 </p>
               </div>
 
-              <div>
-                <p className="font-display text-sm sm:text-base italic text-foreground/70">
+              <div className="-mt-2">
+                <p className="font-display text-sm sm:text-base italic text-foreground/70 text-center">
                   to celebrate the beginning of their journey together
                 </p>
               </div>
 
               <GoldDivider />
 
-              <div className="mx-auto max-w-xs grid grid-cols-2 gap-4 -mt-2">
+              <div className="mx-auto max-w-xs grid grid-cols-2 gap-4 -mt-2 text-center">
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
                   <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
@@ -153,6 +153,11 @@ function Index() {
                     Resort &amp; Country Club
                   </p>
                 </div>
+              </div>
+
+              <div className="mt-4 text-center">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-gold/70">Attire</p>
+                <p className="mt-1 font-display text-sm text-gold-deep italic">Formal</p>
               </div>
             </div>
 
@@ -221,6 +226,44 @@ function Index() {
         </div>
       </section>
 
+      {/* TRAVEL */}
+      <section className="px-6 py-20">
+        <div className="text-center mb-10">
+          <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Travel &amp; Stay</p>
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">
+            Civic Hotel, Autograph Collection
+          </h2>
+          <GoldDivider className="mt-6" />
+        </div>
+
+        <div className="mx-auto max-w-xl text-center space-y-4">
+          <p className="font-display text-lg text-gold-deep">13475 Central Ave</p>
+          <p className="text-foreground/70 text-sm tracking-wider">Surrey, BC V3T 0L8, Canada</p>
+
+          <div className="grid grid-cols-2 gap-6 mx-auto max-w-sm pt-4">
+            <div>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Check-in</p>
+              <p className="font-display text-base text-gold-deep">October 30, 2026</p>
+            </div>
+            <div>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Check-out</p>
+              <p className="font-display text-base text-gold-deep">November 1, 2026</p>
+            </div>
+          </div>
+
+          <div className="pt-6">
+            <a
+              href="https://www.marriott.com/en-us/hotels/yvrak-civic-hotel-autograph-collection/overview/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+            >
+              Book Hotel
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ADULTS ONLY */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-xl text-center border-y border-[var(--gold-soft)]/40 py-12">
@@ -229,7 +272,7 @@ function Index() {
             An Adults-Only Celebration
           </p>
           <p className="mt-6 font-display italic text-foreground/70 leading-relaxed">
-            While we love your little ones, we kindly request this be an adult only event.
+            Although we adore your little ones, we kindly request this be an adult only event.
           </p>
         </div>
       </section>
@@ -246,7 +289,7 @@ function Index() {
           <div className="absolute inset-3 border border-[var(--gold-soft)]/40 pointer-events-none" />
           <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-6 p-12 sm:p-16 items-center">
             <div className="text-center sm:text-right space-y-2">
-              <p className="font-display text-2xl text-gold-deep">RSVP</p>
+              <p className="font-script text-4xl text-gold-deep">RSVP</p>
               <p className="text-xs tracking-[0.3em] uppercase text-gold/70">Mohammad & Tala</p>
               <p className="font-arabic text-sm text-gold/80">محمد و تالة</p>
             </div>
