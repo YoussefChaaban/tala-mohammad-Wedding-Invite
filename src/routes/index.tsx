@@ -234,7 +234,7 @@ function Index() {
             An Adults-Only Celebration
           </p>
           <p className="mt-6 font-display italic text-foreground/70 leading-relaxed">
-            While we love your little ones, we kindly request this be an adult only event.
+            Although we adore your little ones, we kindly request this be an adult only event.
           </p>
         </div>
       </section>
