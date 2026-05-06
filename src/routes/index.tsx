@@ -79,7 +79,7 @@ function Index() {
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-                className="mx-auto w-full max-w-xs sm:max-w-sm"
+                className="mx-auto w-full max-w-[14rem] sm:max-w-[17rem]"
               />
 
               <p
