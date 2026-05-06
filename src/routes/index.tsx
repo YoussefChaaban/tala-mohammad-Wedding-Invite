@@ -226,6 +226,44 @@ function Index() {
         </div>
       </section>
 
+      {/* TRAVEL */}
+      <section className="px-6 py-20">
+        <div className="text-center mb-10">
+          <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Travel &amp; Stay</p>
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">
+            Civic Hotel, Autograph Collection
+          </h2>
+          <GoldDivider className="mt-6" />
+        </div>
+
+        <div className="mx-auto max-w-xl text-center space-y-4">
+          <p className="font-display text-lg text-gold-deep">13475 Central Ave</p>
+          <p className="text-foreground/70 text-sm tracking-wider">Surrey, BC V3T 0L8, Canada</p>
+
+          <div className="grid grid-cols-2 gap-6 mx-auto max-w-sm pt-4">
+            <div>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Check-in</p>
+              <p className="font-display text-base text-gold-deep">October 30, 2026</p>
+            </div>
+            <div>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Check-out</p>
+              <p className="font-display text-base text-gold-deep">November 1, 2026</p>
+            </div>
+          </div>
+
+          <div className="pt-6">
+            <a
+              href="https://www.marriott.com/en-us/hotels/yvrak-civic-hotel-autograph-collection/overview/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+            >
+              Book Hotel
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ADULTS ONLY */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-xl text-center border-y border-[var(--gold-soft)]/40 py-12">
