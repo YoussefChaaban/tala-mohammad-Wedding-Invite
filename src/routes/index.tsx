@@ -114,7 +114,7 @@ function Index() {
               </div>
 
               {/* Names calligraphy */}
-              <div className="py-2">
+              <div className="-mt-2">
                 <img
                   src={names}
                   alt="محمد و تالة — Mohammad & Tala"
@@ -122,7 +122,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-3 font-alex text-4xl sm:text-5xl text-[#A48347] leading-tight">
+                <p className="mt-1 font-alex text-4xl sm:text-5xl text-[#A48347] leading-tight text-center">
                   Mohammad
                   <br />
                   <span className="text-[#A48347]/80">&amp;</span>
@@ -131,15 +131,15 @@ function Index() {
                 </p>
               </div>
 
-              <div>
-                <p className="font-display text-sm sm:text-base italic text-foreground/70">
+              <div className="-mt-2">
+                <p className="font-display text-sm sm:text-base italic text-foreground/70 text-center">
                   to celebrate the beginning of their journey together
                 </p>
               </div>
 
               <GoldDivider />
 
-              <div className="mx-auto max-w-xs grid grid-cols-2 gap-4 -mt-2">
+              <div className="mx-auto max-w-xs grid grid-cols-2 gap-4 -mt-2 text-center">
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
                   <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
@@ -153,6 +153,11 @@ function Index() {
                     Resort &amp; Country Club
                   </p>
                 </div>
+              </div>
+
+              <div className="mt-4 text-center">
+                <p className="text-[10px] tracking-[0.4em] uppercase text-gold/70">Attire</p>
+                <p className="mt-1 font-display text-sm text-gold-deep italic">Formal</p>
               </div>
             </div>
 
