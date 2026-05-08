@@ -80,7 +80,7 @@ function Index() {
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-                className="mx-auto w-full max-w-[14rem] sm:max-w-[17rem]"
+                className="mx-auto w-full max-w-[12rem] sm:max-w-[15rem]"
               />
 
               <p
@@ -123,7 +123,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-1 font-tangerine text-6xl sm:text-7xl text-[#A48347] leading-tight text-center">
+                <p className="mt-1 font-tangerine text-5xl sm:text-6xl text-[#A48347] leading-tight text-center">
                   Mohammad
                   <br />
                   <span className="text-[#A48347]/80">&amp;</span>
