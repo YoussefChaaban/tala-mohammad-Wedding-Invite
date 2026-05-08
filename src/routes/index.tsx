@@ -7,6 +7,7 @@ import monogram from "@/assets/monogram.png";
 import venue from "@/assets/venue-painterly.png";
 import parentsFull from "@/assets/parents-full.png";
 import bismillah from "@/assets/bismillah-calligraphy.png";
+import emblem from "@/assets/monogram-emblem.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
