@@ -3,7 +3,7 @@ import { Countdown } from "@/components/Countdown";
 import border from "@/assets/card-border.png";
 import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
-import monogram from "@/assets/monogram.png";
+
 import venue from "@/assets/venue-painterly.png";
 import parentsFull from "@/assets/parents-full.png";
 import bismillah from "@/assets/bismillah-calligraphy.png";
