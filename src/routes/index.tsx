@@ -153,6 +153,7 @@ function Index() {
                     <br />
                     Resort &amp; Country Club
                   </p>
+                  <p className="font-display text-xs text-gold-deep/80 mt-1">Vancouver, Canada</p>
                 </div>
               </div>
 
