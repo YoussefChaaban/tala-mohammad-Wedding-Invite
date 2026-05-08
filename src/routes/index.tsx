@@ -340,12 +340,12 @@ function Index() {
       {/* FOOTER */}
       <footer className="px-6 py-16 text-center">
         <img
-          src={monogram}
+          src={emblem}
           alt=""
           aria-hidden
-          width={80}
-          height={120}
-          className="mx-auto w-14 opacity-80"
+          width={240}
+          height={320}
+          className="mx-auto w-28 sm:w-32 opacity-90"
         />
         <p className="mt-6 font-script text-3xl text-gold-deep">M &amp; T</p>
         <p className="mt-2 text-[10px] tracking-[0.4em] uppercase text-gold/60">
