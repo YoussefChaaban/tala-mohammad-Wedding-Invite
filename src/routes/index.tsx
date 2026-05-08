@@ -123,10 +123,10 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-1 font-tangerine text-5xl sm:text-6xl leading-tight text-center" style={{ color: '#9A7A43' }}>
+                <p className="mt-1 font-tangerine text-5xl sm:text-6xl leading-tight text-center text-gold-deep">
                   Mohammad
                   <br />
-                  <span style={{ color: '#9A7A43', opacity: 0.85 }}>&amp;</span>
+                  <span className="text-gold-deep/85">&amp;</span>
                   <br />
                   Tala
                 </p>
