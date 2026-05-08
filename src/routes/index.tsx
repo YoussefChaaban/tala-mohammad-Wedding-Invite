@@ -298,7 +298,7 @@ function Index() {
             <div className="hidden sm:block w-px h-24 bg-[var(--gold-soft)]/50" />
             <div className="text-center sm:text-left space-y-4">
               <p className="text-sm text-foreground/70 italic">
-                Please respond by September 20, 2026
+                Please respond by September 15, 2026
               </p>
               <a
                 href="#"
