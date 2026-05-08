@@ -110,7 +110,7 @@ function Index() {
                   request the honor of your presence at the wedding of
                 </p>
                 <p className="font-arabic text-xs sm:text-sm text-foreground/70">
-                  يسرّهما دعوتكم لحضور حفل زفاف ابنيهما
+                  يسرّهما دعوتكم لحضور حفل زفاف أَبْنَاؤُهُمَا
                 </p>
               </div>
 
