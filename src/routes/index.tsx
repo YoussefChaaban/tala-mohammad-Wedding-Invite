@@ -57,11 +57,11 @@ function Index() {
       <section className="relative pt-12 pb-24 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <img
-            src={monogram}
+            src={emblem}
             alt="Monogram"
-            width={120}
-            height={160}
-            className="mx-auto w-16 sm:w-20 animate-fade-up"
+            width={240}
+            height={320}
+            className="mx-auto w-32 sm:w-40 animate-fade-up"
           />
           <p className="mt-8 text-[10px] sm:text-xs tracking-[0.5em] uppercase text-gold/80 animate-fade-up">
             Together with their families
