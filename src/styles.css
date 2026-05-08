@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italiana&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Aref+Ruqaa+Ink:wght@400;700&family=Pinyon+Script&family=Great+Vibes&family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italiana&family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Aref+Ruqaa+Ink:wght@400;700&family=Pinyon+Script&family=Great+Vibes&family=Alex+Brush&family=Tangerine:wght@400;700&display=swap');
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -101,6 +101,7 @@
   .font-script { font-family: 'Pinyon Script', cursive; }
   .font-script-bold { font-family: 'Great Vibes', cursive; }
   .font-alex { font-family: 'Alex Brush', cursive; }
+  .font-tangerine { font-family: 'Tangerine', cursive; }
 
   .gold-divider {
     display: flex;

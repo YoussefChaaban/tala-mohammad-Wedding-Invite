@@ -3,10 +3,11 @@ import { Countdown } from "@/components/Countdown";
 import border from "@/assets/card-border.png";
 import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
-import monogram from "@/assets/monogram.png";
+
 import venue from "@/assets/venue-painterly.png";
 import parentsFull from "@/assets/parents-full.png";
 import bismillah from "@/assets/bismillah-calligraphy.png";
+import emblem from "@/assets/monogram-emblem.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -56,11 +57,11 @@ function Index() {
       <section className="relative pt-12 pb-24 px-6">
         <div className="mx-auto max-w-3xl text-center">
           <img
-            src={monogram}
+            src={emblem}
             alt="Monogram"
-            width={120}
-            height={160}
-            className="mx-auto w-16 sm:w-20 animate-fade-up"
+            width={240}
+            height={320}
+            className="mx-auto w-32 sm:w-40 animate-fade-up"
           />
           <p className="mt-8 text-[10px] sm:text-xs tracking-[0.5em] uppercase text-gold/80 animate-fade-up">
             Together with their families
@@ -83,7 +84,7 @@ function Index() {
               />
 
               <p
-                className="font-arabic text-xs sm:text-sm text-foreground/80 leading-loose mx-auto max-w-[25rem] text-center px-1"
+                className="font-arabic text-xs sm:text-sm text-foreground/70 leading-loose mx-auto max-w-[25rem] text-center px-1"
                 dir="rtl"
               >
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
@@ -109,7 +110,7 @@ function Index() {
                   request the honor of your presence at the wedding of
                 </p>
                 <p className="font-arabic text-xs sm:text-sm text-foreground/70">
-                  يسرّهما دعوتكم لحضور حفل زفاف ابنيهما
+                  يسرّهما دعوتكم لحضور حفل زفاف أَبْنَاؤُهُمَا
                 </p>
               </div>
 
@@ -122,7 +123,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-1 font-alex text-4xl sm:text-5xl text-[#A48347] leading-tight text-center">
+                <p className="mt-1 font-tangerine text-6xl sm:text-7xl text-[#A48347] leading-tight text-center">
                   Mohammad
                   <br />
                   <span className="text-[#A48347]/80">&amp;</span>
@@ -152,6 +153,7 @@ function Index() {
                     <br />
                     Resort &amp; Country Club
                   </p>
+                  <p className="font-display text-xs text-gold-deep/80 mt-1">Vancouver, Canada</p>
                 </div>
               </div>
 
@@ -210,7 +212,7 @@ function Index() {
           <div className="mt-8 text-center space-y-3">
             <p className="font-display text-xl text-gold-deep">16651 Rannie Road</p>
             <p className="text-foreground/70 text-sm tracking-wider">
-              Pitt Meadows, British Columbia
+              Pitt Meadows, British Columbia, Canada
             </p>
             <div className="pt-4">
               <a
@@ -296,7 +298,7 @@ function Index() {
             <div className="hidden sm:block w-px h-24 bg-[var(--gold-soft)]/50" />
             <div className="text-center sm:text-left space-y-4">
               <p className="text-sm text-foreground/70 italic">
-                Please respond by September 20, 2026
+                Please respond by September 15, 2026
               </p>
               <a
                 href="#"
@@ -338,12 +340,12 @@ function Index() {
       {/* FOOTER */}
       <footer className="px-6 py-16 text-center">
         <img
-          src={monogram}
+          src={emblem}
           alt=""
           aria-hidden
-          width={80}
-          height={120}
-          className="mx-auto w-14 opacity-80"
+          width={240}
+          height={320}
+          className="mx-auto w-28 sm:w-32 opacity-90"
         />
         <p className="mt-6 font-script text-3xl text-gold-deep">M &amp; T</p>
         <p className="mt-2 text-[10px] tracking-[0.4em] uppercase text-gold/60">
