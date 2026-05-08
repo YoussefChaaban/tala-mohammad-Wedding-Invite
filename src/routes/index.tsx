@@ -84,7 +84,7 @@ function Index() {
               />
 
               <p
-                className="font-arabic text-xs sm:text-sm text-foreground/80 leading-loose mx-auto max-w-[25rem] text-center px-1"
+                className="font-arabic text-xs sm:text-sm text-foreground/70 leading-loose mx-auto max-w-[25rem] text-center px-1"
                 dir="rtl"
               >
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
