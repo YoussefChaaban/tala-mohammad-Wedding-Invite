@@ -123,7 +123,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-1 font-alex text-4xl sm:text-5xl text-[#A48347] leading-tight text-center">
+                <p className="mt-1 font-tangerine text-6xl sm:text-7xl text-[#A48347] leading-tight text-center">
                   Mohammad
                   <br />
                   <span className="text-[#A48347]/80">&amp;</span>
