@@ -212,7 +212,7 @@ function Index() {
           <div className="mt-8 text-center space-y-3">
             <p className="font-display text-xl text-gold-deep">16651 Rannie Road</p>
             <p className="text-foreground/70 text-sm tracking-wider">
-              Pitt Meadows, British Columbia
+              Pitt Meadows, British Columbia, Canada
             </p>
             <div className="pt-4">
               <a
