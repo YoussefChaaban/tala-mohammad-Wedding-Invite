@@ -12,9 +12,12 @@ function calc() {
   };
 }
 
+const EMPTY_TIME = { d: 0, h: 0, m: 0, s: 0 };
+
 export function Countdown() {
-  const [t, setT] = useState(calc);
+  const [t, setT] = useState(EMPTY_TIME);
   useEffect(() => {
+    setT(calc());
     const id = setInterval(() => setT(calc()), 1000);
     return () => clearInterval(id);
   }, []);
