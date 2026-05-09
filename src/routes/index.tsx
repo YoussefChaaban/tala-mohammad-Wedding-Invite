@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Countdown } from "@/components/Countdown";
 import border from "@/assets/card-border.png";
+import borderTop from "@/assets/border-top.png";
+import borderBottom from "@/assets/border-bottom.png";
+import borderLeft from "@/assets/border-left.png";
+import borderRight from "@/assets/border-right.png";
 import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
 
@@ -39,18 +43,23 @@ function GoldDivider({ className = "" }: { className?: string }) {
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <div
-      className={`relative mx-auto w-full max-w-2xl bg-[var(--cream)]/40 ${className}`}
-      style={{
-        borderStyle: 'solid',
-        borderWidth: 'clamp(70px, 22vw, 160px) clamp(50px, 16vw, 130px)',
-        borderImageSource: `url(${border})`,
-        borderImageSlice: '380 380 380 380 fill',
-        borderImageWidth: 'clamp(70px, 22vw, 160px) clamp(50px, 16vw, 130px)',
-        borderImageRepeat: 'stretch',
-        borderImageOutset: 0,
-      }}
+      className={`relative mx-auto w-full max-w-2xl overflow-hidden bg-[var(--cream)]/40 shadow-[var(--shadow-card)] ${className}`}
     >
-      <div className="relative">{children}</div>
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="absolute inset-y-0 left-0 w-[clamp(4rem,18vw,9rem)] bg-repeat-y bg-top"
+          style={{ backgroundImage: `url(${borderLeft})`, backgroundSize: "100% auto" }}
+        />
+        <div
+          className="absolute inset-y-0 right-0 w-[clamp(4rem,18vw,9rem)] bg-repeat-y bg-top"
+          style={{ backgroundImage: `url(${borderRight})`, backgroundSize: "100% auto" }}
+        />
+        <img src={borderTop} alt="" className="absolute inset-x-0 top-0 w-full h-auto" />
+        <img src={borderBottom} alt="" className="absolute inset-x-0 bottom-0 w-full h-auto" />
+      </div>
+      <div className="relative px-[clamp(3.25rem,17vw,8rem)] pt-[clamp(5.75rem,25vw,11rem)] pb-[clamp(5.5rem,23vw,10rem)]">
+        {children}
+      </div>
     </div>
   );
 }
