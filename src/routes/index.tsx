@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Countdown } from "@/components/Countdown";
 import border from "@/assets/card-border.png";
+import cornerTL from "@/assets/corner-tl.png";
+import cornerTR from "@/assets/corner-tr.png";
+import cornerBL from "@/assets/corner-bl.png";
+import cornerBR from "@/assets/corner-br.png";
 import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
 
@@ -38,14 +42,16 @@ function GoldDivider({ className = "" }: { className?: string }) {
 
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`relative mx-auto w-full max-w-2xl ${className}`}>
-      <img
-        src={border}
-        alt=""
-        aria-hidden
-        className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
-      />
-      <div className="relative px-8 sm:px-28 pt-28 sm:pt-40 pb-36 sm:pb-48">{children}</div>
+    <div className={`relative mx-auto w-full max-w-2xl bg-[var(--cream)]/40 ${className}`}>
+      {/* Double gold frame */}
+      <div className="pointer-events-none absolute inset-2 sm:inset-3 border border-[var(--gold-soft)]/60" />
+      <div className="pointer-events-none absolute inset-3 sm:inset-5 border border-[var(--gold-soft)]/30" />
+      {/* Ornamental corners — preserve aspect ratio, no stretching */}
+      <img src={cornerTL} alt="" aria-hidden className="pointer-events-none select-none absolute top-0 left-0 w-24 sm:w-40 h-auto" />
+      <img src={cornerTR} alt="" aria-hidden className="pointer-events-none select-none absolute top-0 right-0 w-24 sm:w-40 h-auto" />
+      <img src={cornerBL} alt="" aria-hidden className="pointer-events-none select-none absolute bottom-0 left-0 w-24 sm:w-40 h-auto" />
+      <img src={cornerBR} alt="" aria-hidden className="pointer-events-none select-none absolute bottom-0 right-0 w-24 sm:w-40 h-auto" />
+      <div className="relative px-6 sm:px-20 pt-28 sm:pt-36 pb-32 sm:pb-44">{children}</div>
     </div>
   );
 }
