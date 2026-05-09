@@ -39,10 +39,13 @@ function GoldDivider({ className = "" }: { className?: string }) {
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <div className={`relative mx-auto w-full max-w-2xl ${className}`}>
-      <img src={border} alt="" aria-hidden className="block w-full h-auto" />
-      <div className="absolute inset-0 px-[18%] pt-[24%] pb-[16%] overflow-hidden">
-        {children}
-      </div>
+      <img
+        src={border}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+      />
+      <div className="relative px-8 sm:px-28 pt-28 sm:pt-40 pb-36 sm:pb-48">{children}</div>
     </div>
   );
 }
@@ -73,15 +76,15 @@ function Index() {
 
         <div className="mt-10">
           <Card>
-            <div className="text-center space-y-3 sm:space-y-5">
+            <div className="text-center space-y-5">
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-                className="mx-auto w-full max-w-[11rem] sm:max-w-[15rem]"
+                className="mx-auto w-full max-w-[12rem] sm:max-w-[15rem]"
               />
 
               <p
-                className="font-arabic text-[10px] sm:text-sm text-foreground/70 leading-loose mx-auto max-w-[25rem] text-center px-1"
+                className="font-arabic text-xs sm:text-sm text-foreground/70 leading-loose mx-auto max-w-[25rem] text-center px-1"
                 dir="rtl"
               >
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
@@ -96,7 +99,7 @@ function Index() {
                 <img
                   src={parentsFull}
                   alt="علي وميرنا شعبان و حسين وخولا الزير"
-                  className="w-full max-w-[11.5rem] sm:max-w-xs h-auto"
+                  className="w-full max-w-[14rem] sm:max-w-xs h-auto"
                 />
               </div>
 
@@ -120,7 +123,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="-mt-3 sm:-mt-4 font-tangerine text-4xl sm:text-6xl leading-[1.05] text-center text-gold-deep flex flex-col items-center gap-1">
+                <p className="-mt-3 sm:-mt-4 font-tangerine text-5xl sm:text-6xl leading-[1.05] text-center text-gold-deep flex flex-col items-center gap-1">
                   <span className="block">Mohammad</span>
                   <span className="block text-gold-deep/85">&amp;</span>
                   <span className="block">Tala</span>
