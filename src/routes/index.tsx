@@ -45,7 +45,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative px-16 sm:px-28 pt-36 sm:pt-40 pb-44 sm:pb-48">{children}</div>
+      <div className="relative px-8 sm:px-28 pt-28 sm:pt-40 pb-36 sm:pb-48">{children}</div>
     </div>
   );
 }
