@@ -45,7 +45,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative px-16 sm:px-28 pt-36 sm:pt-40 pb-44 sm:pb-48">{children}</div>
+      <div className="relative px-8 sm:px-28 pt-28 sm:pt-40 pb-36 sm:pb-48">{children}</div>
     </div>
   );
 }
@@ -123,12 +123,10 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-xs sm:max-w-sm"
                 />
-                <p className="mt-1 font-tangerine text-5xl sm:text-6xl leading-tight text-center text-gold-deep">
-                  Mohammad
-                  <br />
-                  <span className="text-gold-deep/85">&amp;</span>
-                  <br />
-                  Tala
+                <p className="-mt-3 sm:-mt-4 font-tangerine text-5xl sm:text-6xl leading-[1.05] text-center text-gold-deep flex flex-col items-center gap-1">
+                  <span className="block">Mohammad</span>
+                  <span className="block text-gold-deep/85">&amp;</span>
+                  <span className="block">Tala</span>
                 </p>
               </div>
 
@@ -291,7 +289,7 @@ function Index() {
           <div className="absolute inset-3 border border-[var(--gold-soft)]/40 pointer-events-none" />
           <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-6 p-12 sm:p-16 items-center">
             <div className="text-center sm:text-right space-y-2">
-              <p className="font-script text-4xl text-gold-deep">RSVP</p>
+              <p className="font-display text-3xl sm:text-4xl text-gold-deep tracking-wide">RSVP</p>
               <p className="text-xs tracking-[0.3em] uppercase text-gold/70">Mohammad & Tala</p>
               <p className="font-arabic text-sm text-gold/80">محمد و تالة</p>
             </div>
