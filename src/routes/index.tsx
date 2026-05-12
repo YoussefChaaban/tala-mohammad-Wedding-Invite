@@ -267,10 +267,10 @@ function Index() {
       </section>
 
       {/* ADULTS ONLY */}
-      <section className="px-6 py-20">
+      <section className="px-4 sm:px-6 py-20">
         <div className="mx-auto max-w-xl text-center border-y border-[var(--gold-soft)]/40 py-12">
           <p className="text-base">❖</p>
-          <p className="mt-4 text-xs tracking-[0.5em] uppercase text-gold">
+          <p className="mt-4 text-xs tracking-[0.3em] sm:tracking-[0.5em] uppercase text-gold">
             An Adults-Only Celebration
           </p>
           <p className="mt-6 font-display italic text-foreground/70 leading-relaxed">
@@ -280,19 +280,19 @@ function Index() {
       </section>
 
       {/* RSVP POSTCARD */}
-      <section className="px-6 py-20">
+      <section className="px-4 sm:px-6 py-20">
         <div className="text-center mb-10">
-          <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Kindly Respond</p>
+          <p className="text-xs tracking-[0.35em] sm:tracking-[0.5em] uppercase text-gold/80">Kindly Respond</p>
           <p className="mt-2 font-arabic text-base text-gold/70">نتشرف بحضوركم</p>
           <GoldDivider className="mt-6" />
         </div>
 
         <div className="mx-auto max-w-2xl bg-[var(--cream)] border border-[var(--gold-soft)]/50 shadow-[var(--shadow-card)] relative">
           <div className="absolute inset-3 border border-[var(--gold-soft)]/40 pointer-events-none" />
-          <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-6 p-12 sm:p-16 items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-6 px-8 py-12 sm:p-16 items-center">
             <div className="text-center sm:text-right space-y-2">
               <p className="font-display text-3xl sm:text-4xl text-gold-deep tracking-wide">RSVP</p>
-              <p className="text-xs tracking-[0.3em] uppercase text-gold/70">Mohammad & Tala</p>
+              <p className="text-xs tracking-[0.22em] sm:tracking-[0.3em] uppercase text-gold/70">Mohammad & Tala</p>
               <p className="font-arabic text-sm text-gold/80">محمد و تالة</p>
             </div>
             <div className="hidden sm:block w-px h-24 bg-[var(--gold-soft)]/50" />
@@ -302,7 +302,7 @@ function Index() {
               </p>
               <a
                 href="#"
-                className="inline-block px-8 py-3 bg-[var(--gold-deep)] text-[var(--ivory)] text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] transition-all duration-500"
+                className="inline-block px-8 py-3 bg-[var(--gold-deep)] text-[var(--ivory)] text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase hover:bg-[var(--gold)] transition-all duration-500"
               >
                 Reply
               </a>
@@ -312,7 +312,7 @@ function Index() {
       </section>
 
       {/* GALLERY */}
-      <section className="px-6 py-20">
+      <section className="px-4 sm:px-6 py-20">
         <div className="mx-auto max-w-md">
           <div className="relative">
             <img
@@ -321,7 +321,7 @@ function Index() {
               aria-hidden
               className="absolute inset-0 w-full h-full object-fill pointer-events-none"
             />
-            <div className="relative p-12 aspect-[3/4] flex items-center justify-center">
+            <div className="relative p-8 sm:p-12 aspect-[3/4] flex items-center justify-center">
               <div className="w-full h-full border border-[var(--gold-soft)]/40 flex items-center justify-center bg-[var(--cream)]/30">
                 <div className="text-center px-6">
                   <p className="font-display text-2xl text-gold-deep italic">Coming Soon</p>
@@ -338,7 +338,7 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="px-6 py-16 text-center">
+      <footer className="px-4 sm:px-6 py-16 text-center">
         <img
           src={emblem}
           alt=""
