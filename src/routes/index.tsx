@@ -39,14 +39,10 @@ function GoldDivider({ className = "" }: { className?: string }) {
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <div className={`relative mx-auto w-full max-w-2xl ${className}`}>
-      <img
-        src={border}
-        alt=""
-        aria-hidden
-        className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
-      />
-      <div className="relative px-12 pt-24 pb-32 min-[420px]:px-14 min-[420px]:pt-28 min-[420px]:pb-36 sm:px-28 sm:pt-40 sm:pb-48">
-        {children}
+      <div className="lace-border bg-[var(--ivory)]">
+        <div className="relative px-2 pt-4 pb-10 min-[420px]:px-4 min-[420px]:pt-6 min-[420px]:pb-12 sm:px-6 sm:pt-8 sm:pb-16">
+          {children}
+        </div>
       </div>
     </div>
   );
