@@ -27,16 +27,16 @@ export function Countdown() {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-3 sm:gap-6 max-w-2xl mx-auto">
+    <div className="grid grid-cols-2 min-[420px]:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto">
       {items.map(([label, value, ar]) => (
         <div key={label} className="text-center">
           <div className="relative aspect-square flex flex-col items-center justify-center border border-[var(--gold-soft)]/60 rounded-sm bg-[var(--cream)]/40">
             <div className="absolute inset-1 border border-[var(--gold-soft)]/30 rounded-sm pointer-events-none" />
-            <div className="font-display text-3xl sm:text-5xl text-gold tabular-nums">
+            <div className="font-display text-4xl min-[420px]:text-3xl sm:text-5xl text-gold tabular-nums">
               {String(value).padStart(2, "0")}
             </div>
           </div>
-          <div className="mt-2 text-xs tracking-[0.3em] uppercase text-gold/80">{label}</div>
+          <div className="mt-2 text-xs tracking-[0.22em] sm:tracking-[0.3em] uppercase text-gold/80">{label}</div>
           <div className="font-arabic text-sm text-gold/70">{ar}</div>
         </div>
       ))}
