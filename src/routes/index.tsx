@@ -140,7 +140,7 @@ function Index() {
 
               <GoldDivider />
 
-              <div className="mx-auto max-w-xs grid grid-cols-2 gap-4 -mt-2 text-center">
+              <div className="mx-auto max-w-xs grid grid-cols-1 min-[380px]:grid-cols-2 gap-4 -mt-2 text-center">
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
                   <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
