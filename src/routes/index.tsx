@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Countdown } from "@/components/Countdown";
-
+import border from "@/assets/card-border.png";
 import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
 
@@ -39,10 +39,14 @@ function GoldDivider({ className = "" }: { className?: string }) {
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <div className={`relative mx-auto w-full max-w-2xl ${className}`}>
-      <div className="lace-border bg-[var(--ivory)]">
-        <div className="relative px-2 pt-4 pb-10 min-[420px]:px-4 min-[420px]:pt-6 min-[420px]:pb-12 sm:px-6 sm:pt-8 sm:pb-16">
-          {children}
-        </div>
+      <img
+        src={border}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
+      />
+      <div className="relative px-12 pt-24 pb-32 min-[420px]:px-14 min-[420px]:pt-28 min-[420px]:pb-36 sm:px-28 sm:pt-40 sm:pb-48">
+        {children}
       </div>
     </div>
   );
@@ -310,8 +314,14 @@ function Index() {
       {/* GALLERY */}
       <section className="px-4 sm:px-6 py-20">
         <div className="mx-auto max-w-md">
-          <div className="lace-border bg-[var(--ivory)]">
-            <div className="aspect-[3/4] flex items-center justify-center p-2 sm:p-4">
+          <div className="relative">
+            <img
+              src={border}
+              alt=""
+              aria-hidden
+              className="absolute inset-0 w-full h-full object-fill pointer-events-none"
+            />
+            <div className="relative p-8 sm:p-12 aspect-[3/4] flex items-center justify-center">
               <div className="w-full h-full border border-[var(--gold-soft)]/40 flex items-center justify-center bg-[var(--cream)]/30">
                 <div className="text-center px-6">
                   <p className="font-display text-2xl text-gold-deep italic">Coming Soon</p>

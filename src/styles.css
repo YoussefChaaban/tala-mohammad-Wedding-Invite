@@ -140,22 +140,6 @@
     pointer-events: none;
   }
 
-  /* Lace border that keeps corner ornaments proportional at any size */
-  .lace-border {
-    border-style: solid;
-    border-color: transparent;
-    border-image-source: url('/src/assets/card-border.png');
-    border-image-slice: 320 fill;
-    border-image-repeat: stretch;
-    border-width: 48px;
-  }
-  @media (min-width: 420px) {
-    .lace-border { border-width: 64px; }
-  }
-  @media (min-width: 640px) {
-    .lace-border { border-width: 96px; }
-  }
-
   .painterly {
     filter: sepia(0.15) saturate(0.85) contrast(0.95);
   }
