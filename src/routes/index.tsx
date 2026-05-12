@@ -45,7 +45,9 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative px-8 sm:px-28 pt-28 sm:pt-40 pb-36 sm:pb-48">{children}</div>
+      <div className="relative px-12 pt-24 pb-32 min-[420px]:px-14 min-[420px]:pt-28 min-[420px]:pb-36 sm:px-28 sm:pt-40 sm:pb-48">
+        {children}
+      </div>
     </div>
   );
 }
@@ -74,17 +76,17 @@ function Index() {
           </p>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 mx-auto w-full max-w-[24rem] sm:max-w-none">
           <Card>
-            <div className="text-center space-y-5">
+            <div className="text-center space-y-4 sm:space-y-5">
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-                className="mx-auto w-full max-w-[12rem] sm:max-w-[15rem]"
+                className="mx-auto w-full max-w-[10rem] min-[420px]:max-w-[12rem] sm:max-w-[15rem]"
               />
 
               <p
-                className="font-arabic text-xs sm:text-sm text-foreground/70 leading-loose mx-auto max-w-[25rem] text-center px-1"
+                className="font-arabic text-[0.68rem] sm:text-sm text-foreground/70 leading-loose mx-auto max-w-[25rem] text-center px-1"
                 dir="rtl"
               >
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
@@ -99,17 +101,17 @@ function Index() {
                 <img
                   src={parentsFull}
                   alt="علي وميرنا شعبان و حسين وخولا الزير"
-                  className="w-full max-w-[14rem] sm:max-w-xs h-auto"
+                  className="w-full max-w-[12rem] min-[420px]:max-w-[14rem] sm:max-w-xs h-auto"
                 />
               </div>
 
               <GoldDivider />
 
               <div className="space-y-2">
-                <p className="font-display text-base sm:text-lg text-foreground/70 italic leading-snug">
+                <p className="font-display text-sm sm:text-lg text-foreground/70 italic leading-snug">
                   request the honor of your presence at the wedding of
                 </p>
-                <p className="font-arabic text-xs sm:text-sm text-foreground/70">
+                <p className="font-arabic text-[0.68rem] sm:text-sm text-foreground/70">
                   يسرّهما دعوتكم لحضور حفل زفاف أَبْنَاؤُهُمَا
                 </p>
               </div>
@@ -121,9 +123,9 @@ function Index() {
                   alt="محمد و تالة — Mohammad & Tala"
                   width={1280}
                   height={640}
-                  className="mx-auto w-full max-w-xs sm:max-w-sm"
+                  className="mx-auto w-full max-w-[13rem] min-[420px]:max-w-xs sm:max-w-sm"
                 />
-                <p className="-mt-3 sm:-mt-4 font-tangerine text-5xl sm:text-6xl leading-[1.05] text-center text-gold-deep flex flex-col items-center gap-1">
+                <p className="-mt-2 sm:-mt-4 font-tangerine text-[2.7rem] min-[420px]:text-5xl sm:text-6xl leading-[1.05] text-center text-gold-deep flex flex-col items-center gap-0.5 sm:gap-1">
                   <span className="block">Mohammad</span>
                   <span className="block text-gold-deep/85">&amp;</span>
                   <span className="block">Tala</span>
