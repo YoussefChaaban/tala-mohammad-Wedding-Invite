@@ -310,14 +310,8 @@ function Index() {
       {/* GALLERY */}
       <section className="px-4 sm:px-6 py-20">
         <div className="mx-auto max-w-md">
-          <div className="relative">
-            <img
-              src={border}
-              alt=""
-              aria-hidden
-              className="absolute inset-0 w-full h-full object-fill pointer-events-none"
-            />
-            <div className="relative p-8 sm:p-12 aspect-[3/4] flex items-center justify-center">
+          <div className="lace-border bg-[var(--ivory)]">
+            <div className="aspect-[3/4] flex items-center justify-center p-2 sm:p-4">
               <div className="w-full h-full border border-[var(--gold-soft)]/40 flex items-center justify-center bg-[var(--cream)]/30">
                 <div className="text-center px-6">
                   <p className="font-display text-2xl text-gold-deep italic">Coming Soon</p>
