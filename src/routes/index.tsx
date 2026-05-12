@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Countdown } from "@/components/Countdown";
-import border from "@/assets/card-border.png";
+
 import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
 
