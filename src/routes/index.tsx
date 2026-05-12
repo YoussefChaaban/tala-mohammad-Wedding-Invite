@@ -56,7 +56,7 @@ function Index() {
   return (
     <main className="min-h-screen bg-[var(--ivory)] overflow-x-hidden">
       {/* HERO */}
-      <section className="relative pt-12 pb-24 px-6">
+      <section className="relative pt-10 sm:pt-12 pb-20 sm:pb-24 px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <img
             src={emblem}
@@ -65,7 +65,7 @@ function Index() {
             height={320}
             className="mx-auto w-32 sm:w-40 animate-fade-up"
           />
-          <p className="mt-8 text-[10px] sm:text-xs tracking-[0.5em] uppercase text-gold/80 animate-fade-up">
+          <p className="mt-8 text-[10px] sm:text-xs tracking-[0.38em] sm:tracking-[0.5em] uppercase text-gold/80 animate-fade-up">
             Together with their families
           </p>
           <p
@@ -177,7 +177,7 @@ function Index() {
       </section>
 
       {/* COUNTDOWN */}
-      <section className="px-6 py-24 sm:py-28">
+      <section className="px-4 sm:px-6 py-20 sm:py-28">
         <div className="text-center mb-12">
           <h2 className="font-script text-5xl sm:text-6xl text-gold-deep">Days Left</h2>
           <GoldDivider className="mt-6" />
@@ -186,9 +186,9 @@ function Index() {
       </section>
 
       {/* VENUE */}
-      <section className="px-6 py-20">
+      <section className="px-4 sm:px-6 py-20">
         <div className="text-center mb-10">
-          <p className="text-xs tracking-[0.5em] uppercase text-gold/80">The Venue</p>
+          <p className="text-xs tracking-[0.4em] sm:tracking-[0.5em] uppercase text-gold/80">The Venue</p>
           <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">
             Swaneset Bay Resort &amp; Country Club
           </h2>
@@ -219,7 +219,7 @@ function Index() {
                 href="https://maps.google.com/?q=Swaneset+Bay+Resort+%26+Country+Club+Pitt+Meadows"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+                className="inline-block max-w-full px-8 sm:px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.25em] sm:tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
               >
                 Open in Maps
               </a>
@@ -229,9 +229,9 @@ function Index() {
       </section>
 
       {/* TRAVEL */}
-      <section className="px-6 py-20">
+      <section className="px-4 sm:px-6 py-20">
         <div className="text-center mb-10">
-          <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Travel &amp; Stay</p>
+          <p className="text-xs tracking-[0.35em] sm:tracking-[0.5em] uppercase text-gold/80">Travel &amp; Stay</p>
           <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">
             Civic Hotel, Autograph Collection
           </h2>
@@ -258,7 +258,7 @@ function Index() {
               href="https://www.marriott.com/en-us/hotels/yvrak-civic-hotel-autograph-collection/overview/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+                className="inline-block max-w-full px-8 sm:px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.25em] sm:tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
             >
               Book Hotel
             </a>
