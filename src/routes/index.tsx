@@ -45,7 +45,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative flex flex-col justify-center min-h-full px-6 sm:px-28 pt-24 sm:pt-40 pb-32 sm:pb-48">{children}</div>
+      <div className="relative flex min-h-full flex-col items-center justify-center px-12 pt-16 pb-32 sm:px-28 sm:pt-40 sm:pb-48">{children}</div>
     </div>
   );
 }
@@ -76,15 +76,15 @@ function Index() {
 
         <div className="mt-10">
           <Card>
-            <div className="text-center space-y-5">
+            <div className="w-full text-center space-y-2.5 sm:space-y-5">
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-                className="mx-auto w-full max-w-[12rem] sm:max-w-[15rem]"
+                className="mx-auto w-full max-w-[9.75rem] sm:max-w-[15rem]"
               />
 
               <p
-                className="font-arabic text-xs sm:text-sm text-foreground/70 leading-loose mx-auto max-w-[25rem] text-center px-1"
+                className="font-arabic text-[10px] sm:text-sm text-foreground/70 leading-relaxed sm:leading-loose mx-auto max-w-[17rem] sm:max-w-[25rem] text-center px-1"
                 dir="rtl"
               >
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
@@ -99,65 +99,65 @@ function Index() {
                 <img
                   src={parentsFull}
                   alt="علي وميرنا شعبان و حسين وخولا الزير"
-                  className="w-full max-w-[14rem] sm:max-w-xs h-auto"
+                  className="h-auto w-full max-w-[11.25rem] sm:max-w-xs"
                 />
               </div>
 
               <GoldDivider />
 
               <div className="space-y-2">
-                <p className="font-display text-base sm:text-lg text-foreground/70 italic leading-snug">
+                <p className="font-display text-xs sm:text-lg text-foreground/70 italic leading-snug">
                   request the honor of your presence at the wedding of
                 </p>
-                <p className="font-arabic text-xs sm:text-sm text-foreground/70">
+                <p className="font-arabic text-[10px] sm:text-sm text-foreground/70">
                   يسرّهما دعوتكم لحضور حفل زفاف أَبْنَاؤُهُمَا
                 </p>
               </div>
 
               {/* Names calligraphy */}
-              <div className="-mt-2">
+              <div className="-mt-1 sm:-mt-2">
                 <img
                   src={names}
                   alt="محمد و تالة — Mohammad & Tala"
                   width={1280}
                   height={640}
-                  className="mx-auto w-full max-w-xs sm:max-w-sm"
+                  className="mx-auto w-full max-w-[14rem] sm:max-w-sm"
                 />
-                <p className="-mt-3 sm:-mt-4 font-tangerine text-5xl sm:text-6xl leading-[1.05] text-center text-gold-deep flex flex-col items-center gap-1">
+                <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.35rem] sm:text-6xl leading-none text-center text-gold-deep flex flex-col items-center gap-0 sm:gap-1">
                   <span className="block">Mohammad</span>
                   <span className="block text-gold-deep/85">&amp;</span>
                   <span className="block">Tala</span>
                 </p>
               </div>
 
-              <div className="-mt-2">
-                <p className="font-display text-sm sm:text-base italic text-foreground/70 text-center">
+              <div className="-mt-1 sm:-mt-2">
+                <p className="font-display text-[11px] sm:text-base italic text-foreground/70 text-center leading-snug">
                   to celebrate the beginning of their journey together
                 </p>
               </div>
 
               <GoldDivider />
 
-              <div className="mx-auto max-w-xs grid grid-cols-2 gap-4 -mt-2 text-center">
+              <div className="mx-auto grid max-w-[16rem] sm:max-w-xs grid-cols-2 gap-2 sm:gap-4 -mt-1 sm:-mt-2 text-center">
                 <div>
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
-                  <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
-                  <p className="font-display text-sm text-gold-deep">2026 · 6:00 PM</p>
+                  <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
+                  <p className="font-display text-sm sm:text-lg text-gold-deep leading-tight">October 31</p>
+                  <p className="font-display text-xs sm:text-sm text-gold-deep">2026 · 6:00 PM</p>
                 </div>
                 <div>
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Venue</p>
-                  <p className="font-display text-sm text-gold-deep leading-tight">
+                  <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Venue</p>
+                  <p className="font-display text-[11px] sm:text-sm text-gold-deep leading-tight">
                     Swaneset Bay
                     <br />
                     Resort &amp; Country Club
                   </p>
-                  <p className="font-display text-xs text-gold-deep/80 mt-1">Vancouver, Canada</p>
+                  <p className="font-display text-[10px] sm:text-xs text-gold-deep/80 mt-1">Vancouver, Canada</p>
                 </div>
               </div>
 
-              <div className="mt-4 text-center">
-                <p className="text-[10px] tracking-[0.4em] uppercase text-gold/70">Attire</p>
-                <p className="mt-1 font-display text-sm text-gold-deep italic">Formal</p>
+              <div className="mt-2 sm:mt-4 text-center">
+                <p className="text-[9px] sm:text-[10px] tracking-[0.4em] uppercase text-gold/70">Attire</p>
+                <p className="mt-1 font-display text-[11px] sm:text-sm text-gold-deep italic">Formal</p>
               </div>
             </div>
 
