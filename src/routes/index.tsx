@@ -45,7 +45,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative flex flex-col justify-center min-h-full px-6 sm:px-28 pt-24 sm:pt-40 pb-32 sm:pb-48">{children}</div>
+      <div className="relative flex min-h-full flex-col items-center justify-center px-12 py-20 sm:px-28 sm:pt-40 sm:pb-48">{children}</div>
     </div>
   );
 }
@@ -76,11 +76,11 @@ function Index() {
 
         <div className="mt-10">
           <Card>
-            <div className="text-center space-y-5">
+            <div className="w-full text-center space-y-3 sm:space-y-5">
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-                className="mx-auto w-full max-w-[12rem] sm:max-w-[15rem]"
+                className="mx-auto w-full max-w-[10.5rem] sm:max-w-[15rem]"
               />
 
               <p
@@ -99,14 +99,14 @@ function Index() {
                 <img
                   src={parentsFull}
                   alt="علي وميرنا شعبان و حسين وخولا الزير"
-                  className="w-full max-w-[14rem] sm:max-w-xs h-auto"
+                  className="h-auto w-full max-w-[12.5rem] sm:max-w-xs"
                 />
               </div>
 
               <GoldDivider />
 
               <div className="space-y-2">
-                <p className="font-display text-base sm:text-lg text-foreground/70 italic leading-snug">
+                <p className="font-display text-sm sm:text-lg text-foreground/70 italic leading-snug">
                   request the honor of your presence at the wedding of
                 </p>
                 <p className="font-arabic text-xs sm:text-sm text-foreground/70">
