@@ -115,49 +115,49 @@ function Index() {
               </div>
 
               {/* Names calligraphy */}
-              <div className="-mt-2">
+              <div className="-mt-1 sm:-mt-2">
                 <img
                   src={names}
                   alt="محمد و تالة — Mohammad & Tala"
                   width={1280}
                   height={640}
-                  className="mx-auto w-full max-w-xs sm:max-w-sm"
+                  className="mx-auto w-full max-w-[16rem] sm:max-w-sm"
                 />
-                <p className="-mt-3 sm:-mt-4 font-tangerine text-5xl sm:text-6xl leading-[1.05] text-center text-gold-deep flex flex-col items-center gap-1">
+                <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.8rem] sm:text-6xl leading-none text-center text-gold-deep flex flex-col items-center gap-0.5 sm:gap-1">
                   <span className="block">Mohammad</span>
                   <span className="block text-gold-deep/85">&amp;</span>
                   <span className="block">Tala</span>
                 </p>
               </div>
 
-              <div className="-mt-2">
-                <p className="font-display text-sm sm:text-base italic text-foreground/70 text-center">
+              <div className="-mt-1 sm:-mt-2">
+                <p className="font-display text-xs sm:text-base italic text-foreground/70 text-center leading-snug">
                   to celebrate the beginning of their journey together
                 </p>
               </div>
 
               <GoldDivider />
 
-              <div className="mx-auto max-w-xs grid grid-cols-2 gap-4 -mt-2 text-center">
+              <div className="mx-auto grid max-w-xs grid-cols-2 gap-3 sm:gap-4 -mt-1 sm:-mt-2 text-center">
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
-                  <p className="font-display text-lg text-gold-deep leading-tight">October 31</p>
-                  <p className="font-display text-sm text-gold-deep">2026 · 6:00 PM</p>
+                  <p className="font-display text-base sm:text-lg text-gold-deep leading-tight">October 31</p>
+                  <p className="font-display text-xs sm:text-sm text-gold-deep">2026 · 6:00 PM</p>
                 </div>
                 <div>
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Venue</p>
-                  <p className="font-display text-sm text-gold-deep leading-tight">
+                  <p className="font-display text-xs sm:text-sm text-gold-deep leading-tight">
                     Swaneset Bay
                     <br />
                     Resort &amp; Country Club
                   </p>
-                  <p className="font-display text-xs text-gold-deep/80 mt-1">Vancouver, Canada</p>
+                  <p className="font-display text-[11px] sm:text-xs text-gold-deep/80 mt-1">Vancouver, Canada</p>
                 </div>
               </div>
 
-              <div className="mt-4 text-center">
+              <div className="mt-2 sm:mt-4 text-center">
                 <p className="text-[10px] tracking-[0.4em] uppercase text-gold/70">Attire</p>
-                <p className="mt-1 font-display text-sm text-gold-deep italic">Formal</p>
+                <p className="mt-1 font-display text-xs sm:text-sm text-gold-deep italic">Formal</p>
               </div>
             </div>
 
