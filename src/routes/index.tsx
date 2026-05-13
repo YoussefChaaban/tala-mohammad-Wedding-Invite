@@ -45,7 +45,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative flex min-h-full flex-col items-center justify-center px-12 py-20 sm:px-28 sm:pt-40 sm:pb-48">{children}</div>
+      <div className="relative flex min-h-full flex-col items-center justify-center px-12 pt-16 pb-32 sm:px-28 sm:pt-40 sm:pb-48">{children}</div>
     </div>
   );
 }
@@ -76,15 +76,15 @@ function Index() {
 
         <div className="mt-10">
           <Card>
-            <div className="w-full text-center space-y-3 sm:space-y-5">
+            <div className="w-full text-center space-y-2.5 sm:space-y-5">
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
-                className="mx-auto w-full max-w-[10.5rem] sm:max-w-[15rem]"
+                className="mx-auto w-full max-w-[9.75rem] sm:max-w-[15rem]"
               />
 
               <p
-                className="font-arabic text-xs sm:text-sm text-foreground/70 leading-loose mx-auto max-w-[25rem] text-center px-1"
+                className="font-arabic text-[10px] sm:text-sm text-foreground/70 leading-relaxed sm:leading-loose mx-auto max-w-[17rem] sm:max-w-[25rem] text-center px-1"
                 dir="rtl"
               >
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
@@ -99,17 +99,17 @@ function Index() {
                 <img
                   src={parentsFull}
                   alt="علي وميرنا شعبان و حسين وخولا الزير"
-                  className="h-auto w-full max-w-[12.5rem] sm:max-w-xs"
+                  className="h-auto w-full max-w-[11.25rem] sm:max-w-xs"
                 />
               </div>
 
               <GoldDivider />
 
               <div className="space-y-2">
-                <p className="font-display text-sm sm:text-lg text-foreground/70 italic leading-snug">
+                <p className="font-display text-xs sm:text-lg text-foreground/70 italic leading-snug">
                   request the honor of your presence at the wedding of
                 </p>
-                <p className="font-arabic text-xs sm:text-sm text-foreground/70">
+                <p className="font-arabic text-[10px] sm:text-sm text-foreground/70">
                   يسرّهما دعوتكم لحضور حفل زفاف أَبْنَاؤُهُمَا
                 </p>
               </div>
