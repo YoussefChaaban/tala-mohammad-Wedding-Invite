@@ -45,7 +45,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative flex min-h-full flex-col items-center justify-center px-12 pt-16 pb-32 sm:px-28 sm:pt-40 sm:pb-48">{children}</div>
+      <div className="relative flex min-h-full flex-col items-center justify-center px-16 pt-40 pb-40 sm:px-28 sm:pt-40 sm:pb-48">{children}</div>
     </div>
   );
 }
@@ -123,10 +123,10 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-[14rem] sm:max-w-sm"
                 />
-                <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.35rem] sm:text-6xl leading-none text-center text-gold-deep flex flex-col items-center gap-0 sm:gap-1">
+                <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.35rem] sm:text-6xl leading-none text-center text-gold-deep flex flex-col items-center sm:gap-1">
                   <span className="block">Mohammad</span>
-                  <span className="block text-gold-deep/85">&amp;</span>
-                  <span className="block">Tala</span>
+                  <span className="block text-gold-deep/85 mt-1 sm:mt-0">&amp;</span>
+                  <span className="block mt-3 sm:mt-0">Tala</span>
                 </p>
               </div>
 
