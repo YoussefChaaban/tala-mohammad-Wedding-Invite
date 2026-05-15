@@ -45,7 +45,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative flex min-h-full flex-col items-center justify-center px-16 pt-40 pb-40 sm:px-28 sm:pt-40 sm:pb-48">{children}</div>
+      <div className="relative flex min-h-full flex-col items-center justify-center px-20 pt-28 pb-28 sm:px-28 sm:pt-40 sm:pb-48 [zoom:0.75] sm:[zoom:1]">{children}</div>
     </div>
   );
 }
@@ -76,7 +76,7 @@ function Index() {
 
         <div className="mt-10">
           <Card>
-            <div className="w-full text-center space-y-2.5 sm:space-y-5">
+            <div className="w-full text-center space-y-1.5 sm:space-y-5">
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
@@ -84,7 +84,7 @@ function Index() {
               />
 
               <p
-                className="font-arabic text-[10px] sm:text-sm text-foreground/70 leading-relaxed sm:leading-loose mx-auto max-w-[17rem] sm:max-w-[25rem] text-center px-1"
+                className="font-arabic text-[8px] sm:text-sm text-foreground/70 leading-relaxed sm:leading-loose mx-auto max-w-[17rem] sm:max-w-[25rem] text-center px-1"
                 dir="rtl"
               >
                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
@@ -110,7 +110,7 @@ function Index() {
                   request the honor of your presence at the wedding of
                 </p>
                 <p className="font-arabic text-[10px] sm:text-sm text-foreground/70">
-                  يسرّهما دعوتكم لحضور حفل زفاف أَبْنَاؤُهُمَا
+                  يسرّهما دعوتكم لحضور حفل زفاف أَبْنَاؤُهُمَ
                 </p>
               </div>
 
@@ -125,7 +125,7 @@ function Index() {
                 />
                 <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.35rem] sm:text-6xl leading-none text-center text-gold-deep flex flex-col items-center sm:gap-1">
                   <span className="block">Mohammad</span>
-                  <span className="block text-gold-deep/85 mt-1 sm:mt-0">&amp;</span>
+                  <span className="block mt-1 sm:mt-0">&amp;</span>
                   <span className="block mt-3 sm:mt-0">Tala</span>
                 </p>
               </div>
@@ -168,7 +168,7 @@ function Index() {
               aria-hidden
               width={140}
               height={140}
-              className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-20 sm:w-24 animate-seal drop-shadow-[0_8px_20px_rgba(120,80,20,0.35)]"
+              className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-20 sm:w-24 animate-seal"
             />
           </Card>
         </div>
@@ -289,7 +289,7 @@ function Index() {
           <div className="absolute inset-3 border border-[var(--gold-soft)]/40 pointer-events-none" />
           <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-6 p-12 sm:p-16 items-center">
             <div className="text-center sm:text-right space-y-2">
-              <p className="font-display text-3xl sm:text-4xl text-gold-deep tracking-wide">RSVP</p>
+              <p className="font-script text-3xl sm:text-4xl text-gold-deep">RSVP</p>
               <p className="text-xs tracking-[0.3em] uppercase text-gold/70">Mohammad & Tala</p>
               <p className="font-arabic text-sm text-gold/80">محمد و تالة</p>
             </div>
@@ -300,7 +300,7 @@ function Index() {
               </p>
               <a
                 href="#"
-                className="inline-block px-8 py-3 bg-[var(--gold-deep)] text-[var(--ivory)] text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] transition-all duration-500"
+                className="block mx-auto w-fit px-8 py-3 bg-[var(--gold-deep)] text-[var(--ivory)] text-xs uppercase hover:bg-[var(--gold)] transition-all duration-500 text-center"
               >
                 Reply
               </a>
