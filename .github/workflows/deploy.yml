@@ -31,8 +31,15 @@ jobs:
 
       - run: npm run build
 
-      - name: Copy index.html to 404.html for SPA routing
-        run: cp dist/client/index.html dist/client/404.html
+      - name: Pre-render index.html via local Cloudflare Worker
+        working-directory: dist/server
+        run: |
+          npx wrangler dev --port 8787 &
+          WRANGLER_PID=$!
+          timeout 30 bash -c 'until curl -sf http://localhost:8787/ > /dev/null 2>&1; do sleep 1; done'
+          curl -s http://localhost:8787/ > ../client/index.html
+          cp ../client/index.html ../client/404.html
+          kill $WRANGLER_PID 2>/dev/null || true
 
       - uses: actions/configure-pages@v4
 
