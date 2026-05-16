@@ -98,7 +98,7 @@ function Index() {
               <div className="flex justify-center">
                 <img
                   src={parentsFull}
-                  alt="علي وميرنا شعبان و حسين وخولا الزير"
+                  alt="علي وميرنا شعبان و حسين وخولة الزير"
                   className="h-auto w-full max-w-[11.25rem] sm:max-w-xs"
                 />
               </div>
