@@ -5,7 +5,7 @@ import names from "@/assets/names-calligraphy.png";
 import seal from "@/assets/wax-seal.png";
 
 import venue from "@/assets/venue-painterly.png";
-import parentsFull from "@/assets/parents-full.png";
+import parentsFull from "@/assets/ parents-full-updated.png";
 import bismillah from "@/assets/bismillah-calligraphy.png";
 import emblem from "@/assets/monogram-emblem.png";
 
@@ -13,16 +13,16 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Mohammad & Tala — October 31, 2026" },
+      { title: "Mohammad Alzeir & Tala Chaaban's Wedding Invitation" },
       {
         name: "description",
         content:
-          "The wedding of Mohammad & Tala — October 31, 2026 at Swaneset Bay Resort, Pitt Meadows, BC.",
+          "Mohammad Alzeir & Tala Chaaban's Wedding Invitation — October 31, 2026 at Swaneset Bay Resort, Pitt Meadows, BC.",
       },
-      { property: "og:title", content: "Mohammad & Tala — Wedding Invitation" },
+      { property: "og:title", content: "Mohammad Alzeir & Tala Chaaban's Wedding Invitation" },
       {
         property: "og:description",
-        content: "Join us in celebrating our wedding on October 31, 2026.",
+        content: "Mohammad Alzeir & Tala Chaaban's Wedding Invitation — October 31, 2026 at Swaneset Bay Resort, Pitt Meadows, BC.",
       },
     ],
   }),

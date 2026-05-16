@@ -52,9 +52,9 @@
   --gold-soft: oklch(0.78 0.07 80);
   --gold-deep: #8B6933;
 
-  --background: oklch(0.965 0.012 85);
+  --background: oklch(0.98 0.002 85);
   --foreground: oklch(0.35 0.04 70);
-  --card: oklch(0.97 0.010 85);
+  --card: oklch(0.99 0.002 85);
   --card-foreground: oklch(0.35 0.04 70);
   --popover: oklch(0.97 0.010 85);
   --popover-foreground: oklch(0.35 0.04 70);
@@ -77,7 +77,7 @@
 }
 
 .dark {
-  --background: oklch(0.965 0.012 85);
+  --background: oklch(0.98 0.002 85);
   --foreground: oklch(0.35 0.04 70);
 }
 
