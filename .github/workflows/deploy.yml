@@ -34,7 +34,7 @@ jobs:
       - name: Pre-render index.html via local Cloudflare Worker
         working-directory: dist/server
         run: |
-          npx wrangler dev --main server.js --port 8787 &
+          npx wrangler dev --port 8787 &
           WRANGLER_PID=$!
           timeout 30 bash -c 'until curl -sf http://localhost:8787/ > /dev/null 2>&1; do sleep 1; done'
           curl -s http://localhost:8787/ > ../client/index.html
