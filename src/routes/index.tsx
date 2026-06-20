@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, useEffect, useRef } from "react";
 import { Countdown } from "@/components/Countdown";
 import border from "@/assets/card-border.png";
 import names from "@/assets/names-calligraphy.png";
@@ -8,6 +9,11 @@ import venue from "@/assets/venue-painterly.png";
 import parentsFull from "@/assets/Parent-full-updated1.png";
 import bismillah from "@/assets/bismillah-calligraphy.png";
 import emblem from "@/assets/monogram-emblem.png";
+import borderRect from "@/assets/card-border-rect.png";
+import slide1 from "@/assets/IMG_9502.jpg";
+import slide2 from "@/assets/IMG_9510.jpg";
+import slide3 from "@/assets/IMG_9505.jpg";
+import slide4 from "@/assets/IMG_9512.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -50,6 +56,65 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
   );
 }
 
+const gallerySlides = [slide1, slide2, slide3, slide4];
+
+function GallerySlideshow() {
+  const [current, setCurrent] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          intervalRef.current = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % gallerySlides.length);
+          }, 5000);
+        } else if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+          intervalRef.current = null;
+        }
+      },
+      { threshold: 0.3 },
+    );
+
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  return (
+    <section ref={sectionRef} className="px-6 py-20">
+      <div className="mx-auto max-w-md">
+        <div className="relative">
+          <div className="relative aspect-[3/4]">
+            <img
+              src={borderRect}
+              alt=""
+              aria-hidden
+              className="absolute inset-0 w-full h-full object-fill"
+            />
+            {gallerySlides.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt=""
+                className={`absolute object-cover transition-opacity duration-1000 z-10 ${i === current ? "opacity-100" : "opacity-0"}`}
+                style={{ top: "10%", left: "12%", width: "76%", height: "80%" }}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <main className="min-h-screen bg-[var(--ivory)] overflow-x-hidden">
@@ -76,7 +141,7 @@ function Index() {
 
         <div className="mt-10">
           <Card>
-            <div className="w-full text-center space-y-1.5 sm:space-y-5">
+            <div className="w-full text-center space-y-0.5 sm:space-y-3 pb-4 sm:pb-6">
               <img
                 src={bismillah}
                 alt="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
@@ -105,7 +170,7 @@ function Index() {
 
               <GoldDivider />
 
-              <div className="space-y-2">
+              <div className="space-y-2 -mt-2 sm:-mt-4">
                 <p className="font-display text-xs sm:text-lg text-foreground/70 italic leading-snug">
                   request the honor of your presence at the wedding of
                 </p>
@@ -123,7 +188,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-[14rem] sm:max-w-sm"
                 />
-                <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.35rem] sm:text-6xl leading-none text-center text-gold-deep flex flex-col items-center sm:gap-1">
+                <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.1rem] sm:text-[3.25rem] leading-none text-center text-gold-deep flex flex-col items-center sm:gap-1">
                   <span className="block">Mohammad</span>
                   <span className="block mt-1 sm:mt-0 relative -top-1">&amp;</span>
                   <span className="block mt-3 sm:mt-0">Tala</span>
@@ -139,26 +204,23 @@ function Index() {
               <GoldDivider />
 
               <div className="mx-auto grid max-w-[16rem] sm:max-w-xs grid-cols-2 gap-2 sm:gap-4 -mt-1 sm:-mt-2 text-center">
-                <div>
+                <div className="flex flex-col justify-between">
                   <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
-                  <p className="font-display text-sm sm:text-lg text-gold-deep leading-tight">October 31</p>
-                  <p className="font-display text-xs sm:text-sm text-gold-deep">2026 · 6:00 PM</p>
+                  <p className="font-display text-[0.8rem] sm:text-[0.95rem] text-gold-deep leading-tight">October 31, 2026</p>
+                  <p className="font-display text-[0.65rem] sm:text-xs text-gold-deep">Reception: 5:30 PM</p>
+                  <p className="font-display text-[0.65rem] sm:text-xs text-gold-deep">Zaffe: 6:00 PM</p>
                 </div>
-                <div>
+                <div className="flex flex-col justify-between">
                   <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Venue</p>
-                  <p className="font-display text-[11px] sm:text-sm text-gold-deep leading-tight">
+                  <p className="font-display text-[0.8rem] sm:text-[0.95rem] text-gold-deep leading-tight">
                     Swaneset Bay
                     <br />
-                    Resort &amp; Country Club
+                    Resort &amp;&nbsp;Country&nbsp;Club
                   </p>
-                  <p className="font-display text-[10px] sm:text-xs text-gold-deep/80 mt-1">Vancouver, Canada</p>
+                  <p className="font-display text-[0.65rem] sm:text-xs text-gold-deep mt-1">Vancouver, Canada</p>
                 </div>
               </div>
 
-              <div className="mt-2 sm:mt-4 text-center">
-                <p className="text-[9px] sm:text-[10px] tracking-[0.4em] uppercase text-gold/70">Attire</p>
-                <p className="mt-1 font-display text-[11px] sm:text-sm text-gold-deep italic">Formal</p>
-              </div>
             </div>
 
             {/* Wax seal */}
@@ -258,10 +320,12 @@ function Index() {
             <div className="hidden sm:block w-px h-24 bg-[var(--gold-soft)]/50" />
             <div className="text-center sm:text-left space-y-4">
               <p className="text-sm text-foreground/70 italic">
-                Please respond by September 15, 2026
+                Please respond by September 10, 2026
               </p>
               <a
-                href="#"
+                href="http://theknot.com/mohammadtala"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block mx-auto w-fit px-8 py-3 bg-[var(--gold-deep)] text-[var(--ivory)] text-xs uppercase hover:bg-[var(--gold)] transition-all duration-500 text-center"
               >
                 Reply
@@ -285,16 +349,6 @@ function Index() {
           <p className="font-display text-lg text-gold-deep">13475 Central Ave</p>
           <p className="text-foreground/70 text-sm tracking-wider">Surrey, BC V3T 0L8, Canada</p>
 
-          <div className="grid grid-cols-2 gap-6 mx-auto max-w-sm pt-4">
-            <div>
-              <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Check-in</p>
-              <p className="font-display text-base text-gold-deep">October 30, 2026</p>
-            </div>
-            <div>
-              <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Check-out</p>
-              <p className="font-display text-base text-gold-deep">November 1, 2026</p>
-            </div>
-          </div>
 
           <div className="pt-6">
             <a
@@ -309,31 +363,31 @@ function Index() {
         </div>
       </section>
 
-      {/* GALLERY */}
+      {/* REGISTRY */}
       <section className="px-6 py-20">
-        <div className="mx-auto max-w-md">
-          <div className="relative">
-            <img
-              src={border}
-              alt=""
-              aria-hidden
-              className="absolute inset-0 w-full h-full object-fill pointer-events-none"
-            />
-            <div className="relative p-12 aspect-[3/4] flex items-center justify-center">
-              <div className="w-full h-full border border-[var(--gold-soft)]/40 flex items-center justify-center bg-[var(--cream)]/30">
-                <div className="text-center px-6">
-                  <p className="font-display text-2xl text-gold-deep italic">Coming Soon</p>
-                  <p className="mt-3 font-arabic text-sm text-gold/70">قريباً</p>
-                  <div className="mt-4 mx-auto w-16 h-px bg-[var(--gold-soft)]" />
-                  <p className="mt-4 text-[10px] tracking-[0.4em] uppercase text-gold/70">
-                    A portrait awaits
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="mx-auto max-w-xl text-center border-y border-[var(--gold-soft)]/40 py-12">
+          <p className="text-base">❖</p>
+          <p className="mt-4 text-xs tracking-[0.5em] uppercase text-gold/80">
+            Registry
+          </p>
+          <p className="mt-6 font-display italic text-foreground/70 leading-relaxed">
+            Your presence is the greatest gift of all. However, if you wish to honor us with a gift, we have registered below.
+          </p>
+          <div className="mt-8">
+            <a
+              href="https://registry.theknot.com/mohammad-alzeir-tala-chaaban-october-2026-ca/74842309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+            >
+              Newlywed Fund
+            </a>
           </div>
         </div>
       </section>
+
+      {/* GALLERY SLIDESHOW */}
+      <GallerySlideshow />
 
       {/* FOOTER */}
       <footer className="px-6 py-16 text-center">
