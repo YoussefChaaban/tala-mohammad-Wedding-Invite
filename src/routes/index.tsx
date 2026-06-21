@@ -123,7 +123,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-[14rem] sm:max-w-sm"
                 />
-                <p className="-mt-3 sm:-mt-4 font-tangerine text-[1.85rem] sm:text-5xl leading-none text-center text-gold-deep flex flex-col items-center sm:gap-1">
+                <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.1rem] sm:text-[3.25rem] leading-none text-center text-gold-deep flex flex-col items-center sm:gap-1">
                   <span className="block">Mohammad</span>
                   <span className="block mt-1 sm:mt-0 relative -top-1">&amp;</span>
                   <span className="block mt-3 sm:mt-0">Tala</span>
@@ -141,8 +141,9 @@ function Index() {
               <div className="mx-auto grid max-w-[16rem] sm:max-w-xs grid-cols-2 gap-2 sm:gap-4 -mt-1 sm:-mt-2 text-center">
                 <div>
                   <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
-                  <p className="font-display text-sm sm:text-lg text-gold-deep leading-tight">October 31</p>
-                  <p className="font-display text-xs sm:text-sm text-gold-deep">2026 · 6:00 PM</p>
+                  <p className="font-display text-[11px] sm:text-sm text-gold-deep leading-tight">October 31 2026</p>
+                  <p className="font-display text-[11px] sm:text-sm text-gold-deep">Reception: 5:30 PM</p>
+                  <p className="font-display text-[11px] sm:text-sm text-gold-deep">Zaffe: 6:00 PM</p>
                 </div>
                 <div>
                   <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Venue</p>
@@ -151,7 +152,7 @@ function Index() {
                     <br />
                     Resort &amp; Country Club
                   </p>
-                  <p className="font-display text-[10px] sm:text-xs text-gold-deep/80 mt-1">Vancouver, Canada</p>
+                  <p className="font-display text-[11px] sm:text-sm text-gold-deep mt-1 italic">Vancouver, Canada</p>
                 </div>
               </div>
 
@@ -261,7 +262,9 @@ function Index() {
                 Please respond by September 15, 2026
               </p>
               <a
-                href="#"
+                href="https://www.theknot.com/us/mohammad-alzeir-and-tala-chaaban-oct-2026/rsvp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block mx-auto w-fit px-8 py-3 bg-[var(--gold-deep)] text-[var(--ivory)] text-xs uppercase hover:bg-[var(--gold)] transition-all duration-500 text-center"
               >
                 Reply
