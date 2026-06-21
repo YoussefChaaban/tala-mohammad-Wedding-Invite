@@ -377,8 +377,9 @@ function Index() {
               aria-hidden
               className="absolute inset-0 w-full h-full object-fill pointer-events-none"
             />
-            <div className="relative p-12 aspect-[3/4] flex items-center justify-center">
-              <div className="w-full h-full border border-[var(--gold-soft)]/40 overflow-hidden relative">
+            <div className="relative p-14 sm:p-16 aspect-[3/4] flex items-center justify-center">
+              <div className="w-full h-full relative bg-[var(--ivory)] p-2 sm:p-3 shadow-[0_0_0_1px_var(--gold-soft)]">
+                <div className="w-full h-full overflow-hidden relative border border-[var(--gold-soft)]/60">
                 {slideshowImages.map((src, i) => (
                   <img
                     key={i}
@@ -387,6 +388,7 @@ function Index() {
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
                   />
                 ))}
+                </div>
               </div>
             </div>
           </div>
