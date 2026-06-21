@@ -6,4 +6,14 @@
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-export default defineConfig();
+export default defineConfig({
+  nitro: {
+    cloudflare: {
+      wrangler: {
+        name: "tala-mohammad-s-union",
+        compatibility_date: "2025-09-24",
+        compatibility_flags: ["nodejs_compat"],
+      },
+    },
+  },
+});
