@@ -115,7 +115,7 @@ function Index() {
               </div>
 
               {/* Names calligraphy */}
-              <div className="-mt-1 sm:-mt-2">
+              <div className="-mt-5 sm:-mt-8">
                 <img
                   src={names}
                   alt="محمد و تالة — Mohammad & Tala"
@@ -123,7 +123,7 @@ function Index() {
                   height={640}
                   className="mx-auto w-full max-w-[14rem] sm:max-w-sm"
                 />
-                <p className="-mt-3 sm:-mt-4 font-tangerine text-[2.35rem] sm:text-6xl leading-none text-center text-gold-deep flex flex-col items-center sm:gap-1">
+                <p className="-mt-3 sm:-mt-4 font-tangerine text-[1.85rem] sm:text-5xl leading-none text-center text-gold-deep flex flex-col items-center sm:gap-1">
                   <span className="block">Mohammad</span>
                   <span className="block mt-1 sm:mt-0 relative -top-1">&amp;</span>
                   <span className="block mt-3 sm:mt-0">Tala</span>
