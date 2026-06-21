@@ -259,7 +259,7 @@ function Index() {
             <div className="hidden sm:block w-px h-24 bg-[var(--gold-soft)]/50" />
             <div className="text-center sm:text-left space-y-4">
               <p className="text-sm text-foreground/70 italic">
-                Please respond by September 15, 2026
+                Please respond by September 10, 2026
               </p>
               <a
                 href="https://www.theknot.com/us/mohammad-alzeir-and-tala-chaaban-oct-2026/rsvp"
@@ -307,6 +307,30 @@ function Index() {
               className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
             >
               Book Hotel
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* REGISTRY */}
+      <section className="px-6 py-20">
+        <div className="text-center mb-10">
+          <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Gift Registry</p>
+          <GoldDivider className="mt-6" />
+        </div>
+
+        <div className="mx-auto max-w-xl text-center space-y-4">
+          <p className="text-foreground/70 text-sm leading-relaxed">
+            Your presence is the greatest gift. However, if you wish to honor us with a gift, we have registered at the link below.
+          </p>
+          <div className="pt-6">
+            <a
+              href="https://registry.theknot.com/mohammad-alzeir-tala-chaaban-october-2026-canada/74842309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+            >
+              View Registry
             </a>
           </div>
         </div>
