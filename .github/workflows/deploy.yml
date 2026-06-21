@@ -1,12 +1,24 @@
-name: Deploy to Cloudflare Workers
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -19,7 +31,21 @@ jobs:
 
       - run: npm run build
 
-      - name: Deploy to Cloudflare Workers
-        run: cd dist/server && npx wrangler deploy
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - name: Pre-render index.html via local Cloudflare Worker
+        working-directory: dist/server
+        run: |
+          npx wrangler dev --port 8787 &
+          WRANGLER_PID=$!
+          timeout 30 bash -c 'until curl -sf http://localhost:8787/ > /dev/null 2>&1; do sleep 1; done'
+          curl -s http://localhost:8787/ > ../client/index.html
+          cp ../client/index.html ../client/404.html
+          kill $WRANGLER_PID 2>/dev/null || true
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/client
+
+      - uses: actions/deploy-pages@v4
+        id: deployment
