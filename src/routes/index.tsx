@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, useEffect, useRef } from "react";
 import { Countdown } from "@/components/Countdown";
 import border from "@/assets/card-border.png";
 import names from "@/assets/names-calligraphy.png";
@@ -8,6 +9,13 @@ import venue from "@/assets/venue-painterly.png";
 import parentsFull from "@/assets/Parent-full-updated1.png";
 import bismillah from "@/assets/bismillah-calligraphy.png";
 import emblem from "@/assets/monogram-emblem.png";
+
+import slide1 from "@/assets/IMG_9502.JPG";
+import slide2 from "@/assets/IMG_9505.JPG";
+import slide3 from "@/assets/IMG_9510.JPG";
+import slide4 from "@/assets/IMG_9512.JPG";
+
+const slideshowImages = [slide1, slide3, slide2, slide4];
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -51,6 +59,29 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
 }
 
 function Index() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideshowVisible, setSlideshowVisible] = useState(false);
+  const slideshowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = slideshowRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setSlideshowVisible(entry.isIntersecting),
+      { threshold: 0.3 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!slideshowVisible) return;
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [slideshowVisible]);
+
   return (
     <main className="min-h-screen bg-[var(--ivory)] overflow-x-hidden">
       {/* HERO */}
@@ -337,7 +368,7 @@ function Index() {
       </section>
 
       {/* GALLERY */}
-      <section className="px-6 py-20">
+      <section ref={slideshowRef} className="px-6 py-20">
         <div className="mx-auto max-w-md">
           <div className="relative">
             <img
@@ -347,15 +378,15 @@ function Index() {
               className="absolute inset-0 w-full h-full object-fill pointer-events-none"
             />
             <div className="relative p-12 aspect-[3/4] flex items-center justify-center">
-              <div className="w-full h-full border border-[var(--gold-soft)]/40 flex items-center justify-center bg-[var(--cream)]/30">
-                <div className="text-center px-6">
-                  <p className="font-display text-2xl text-gold-deep italic">Coming Soon</p>
-                  <p className="mt-3 font-arabic text-sm text-gold/70">قريباً</p>
-                  <div className="mt-4 mx-auto w-16 h-px bg-[var(--gold-soft)]" />
-                  <p className="mt-4 text-[10px] tracking-[0.4em] uppercase text-gold/70">
-                    A portrait awaits
-                  </p>
-                </div>
+              <div className="w-full h-full border border-[var(--gold-soft)]/40 overflow-hidden relative">
+                {slideshowImages.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`Mohammad & Tala ${i + 1}`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
