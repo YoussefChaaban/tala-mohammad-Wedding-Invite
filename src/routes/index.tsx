@@ -32,6 +32,10 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Mohammad Alzeir & Tala Chaaban's Wedding Invitation — October 31, 2026 at Swaneset Bay Resort, Pitt Meadows, BC.",
       },
+      { property: "og:image", content: "https://mohammadandtala.com/og-image.png" },
+      { property: "og:image:width", content: "1248" },
+      { property: "og:image:height", content: "832" },
+      { property: "og:type", content: "website" },
     ],
   }),
 });
