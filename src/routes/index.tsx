@@ -169,21 +169,21 @@ function Index() {
 
               <GoldDivider />
 
-              <div className="mx-auto grid max-w-[16rem] sm:max-w-xs grid-cols-2 gap-2 sm:gap-4 -mt-1 sm:-mt-2 text-center">
+              <div className="mx-auto grid max-w-[18rem] sm:max-w-sm grid-cols-2 gap-2 sm:gap-4 -mt-1 sm:-mt-2 text-center">
                 <div>
                   <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Date</p>
-                  <p className="font-display text-[11px] sm:text-sm text-gold-deep leading-tight">October 31 2026</p>
-                  <p className="font-display text-[11px] sm:text-sm text-gold-deep">Reception: 5:30 PM</p>
-                  <p className="font-display text-[11px] sm:text-sm text-gold-deep">Zaffe: 6:00 PM</p>
+                  <p className="font-display text-sm sm:text-lg text-gold-deep leading-tight">October 31 2026</p>
+                  <p className="font-display text-[8px] sm:text-[10px] text-gold-deep">Reception: 5:30 PM</p>
+                  <p className="font-display text-[8px] sm:text-[10px] text-gold-deep">Zaffe: 6:00 PM</p>
                 </div>
                 <div>
                   <p className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Venue</p>
-                  <p className="font-display text-[11px] sm:text-sm text-gold-deep leading-tight">
+                  <p className="font-display text-xs sm:text-base text-gold-deep leading-tight">
                     Swaneset Bay
                     <br />
                     Resort &amp; Country Club
                   </p>
-                  <p className="font-display text-[11px] sm:text-sm text-gold-deep mt-1 italic">Vancouver, Canada</p>
+                  <p className="font-display text-[9px] sm:text-[11px] text-gold-deep mt-1">Vancouver, Canada</p>
                 </div>
               </div>
 
