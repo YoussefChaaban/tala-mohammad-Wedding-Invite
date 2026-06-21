@@ -309,36 +309,47 @@ function Index() {
       <section className="px-6 py-20">
         <div className="text-center mb-10">
           <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Travel &amp; Stay</p>
-          <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">
-            Civic Hotel, Autograph Collection
-          </h2>
+          <p className="mt-4 text-xs tracking-[0.5em] uppercase text-gold/80">Recommendations</p>
           <GoldDivider className="mt-6" />
         </div>
 
-        <div className="mx-auto max-w-xl text-center space-y-4">
-          <p className="font-display text-lg text-gold-deep">13475 Central Ave</p>
-          <p className="text-foreground/70 text-sm tracking-wider">Surrey, BC V3T 0L8, Canada</p>
-
-          <div className="grid grid-cols-2 gap-6 mx-auto max-w-sm pt-4">
-            <div>
-              <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Check-in</p>
-              <p className="font-display text-base text-gold-deep">October 30, 2026</p>
-            </div>
-            <div>
-              <p className="text-[10px] tracking-[0.3em] uppercase text-gold/70 mb-1">Check-out</p>
-              <p className="font-display text-base text-gold-deep">November 1, 2026</p>
+        <div className="mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-10">
+          {/* Left — Hilton */}
+          <div className="text-center space-y-4">
+            <h3 className="font-display text-xl sm:text-2xl text-gold-deep">
+              Hilton Vancouver Downtown
+            </h3>
+            <p className="font-display text-lg text-gold-deep">433 Robson St</p>
+            <p className="text-foreground/70 text-sm tracking-wider">Vancouver, BC V6B 6L9, Canada</p>
+            <div className="pt-4">
+              <a
+                href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=YVRWGHH&arrivalDate=2026-10-29&departureDate=2026-11-02&groupCode=wedg&room1NumAdults=2&displayCurrency=USD"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+              >
+                Book Hotel
+              </a>
             </div>
           </div>
 
-          <div className="pt-6">
-            <a
-              href="https://www.marriott.com/en-us/hotels/yvrak-civic-hotel-autograph-collection/overview/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
-            >
-              Book Hotel
-            </a>
+          {/* Right — Civic Hotel */}
+          <div className="text-center space-y-4">
+            <h3 className="font-display text-xl sm:text-2xl text-gold-deep">
+              Civic Hotel, Autograph Collection
+            </h3>
+            <p className="font-display text-lg text-gold-deep">13475 Central Ave</p>
+            <p className="text-foreground/70 text-sm tracking-wider">Surrey, BC V3T 0L8, Canada</p>
+            <div className="pt-4">
+              <a
+                href="https://www.marriott.com/search/findHotels.mi?fromToDate_submit=11/02/2026&fromDate=10/29/2026&toDate=11/02/2026&toDateDefaultFormat=11/02/2026&fromDateDefaultFormat=10/29/2026&flexibleDateSearch=false&t-start=2026-10-29&t-end=2026-11-02&lengthOfStay=4&childrenCountBox=0+Children+Per+Room&childrenCount=0&clusterCode=none&isAdvanceSearch=false&isNGSF=false&recordsPerPage=40&destinationAddress.type=Hotel+Name&destinationAddress.latitude=49.1905961&isInternalSearch=true&vsInitialRequest=false&searchType=InCity&destinationAddress.stateProvince=BC&searchRadius=50&singleSearchAutoSuggest=Unmatched&destinationAddress.placeId=ChIJVWLXWNPZhVQRirPHIr95Shs&for-hotels-nearme=Near&destinationAddress.country=CA&collapseAccordian=is-hidden&singleSearch=true&destinationAddress.secondaryText=BC,+CA&destinationAddress.city=Surrey&destinationAddress.mainText=Surrey&isTransient=true&destinationAddress.longitude=-122.8483246&initialRequest=true&flexibleDateSearchRateDisplay=false&isSearch=true&isRateCalendar=true&destinationAddress.destination=Civic+Hotel,+Autograph+Collection,+Central+Avenue,+Surrey,+BC,+Canada&isHideFlexibleDateCalendar=false&roomCountBox=1+Room&roomCount=1&guestCountBox=1+Adult+Per+Room&numAdultsPerRoom=2&deviceType=desktop-web&view=list&destinationAddress.location=Civic+Hotel,+Autograph+Collection,+Central+Avenue,+Surrey,+BC,+Canada&fromToDate=06/20/2026&isFlexibleDatesOptionSelected=false&numberOfRooms=1&showFullPrice=false&currency=USD&priceRangeIndex=0#/10/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+              >
+                Book Hotel
+              </a>
+            </div>
           </div>
         </div>
       </section>
