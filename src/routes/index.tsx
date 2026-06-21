@@ -53,7 +53,7 @@ function Card({ children, className = "" }: { children: React.ReactNode; classNa
         aria-hidden
         className="absolute inset-0 w-full h-full object-fill pointer-events-none select-none"
       />
-      <div className="relative flex min-h-full flex-col items-center justify-center px-20 pt-28 pb-28 sm:px-28 sm:pt-40 sm:pb-48 [zoom:0.75] sm:[zoom:1]">{children}</div>
+      <div className="relative flex min-h-full flex-col items-center justify-center px-12 pt-20 pb-20 sm:px-28 sm:pt-40 sm:pb-48 [zoom:0.75] sm:[zoom:1]">{children}</div>
     </div>
   );
 }
@@ -85,7 +85,7 @@ function Index() {
   return (
     <main className="min-h-screen bg-[var(--ivory)] overflow-x-hidden">
       {/* HERO */}
-      <section className="relative pt-12 pb-24 px-6">
+      <section className="relative pt-8 pb-16 px-4 sm:pt-12 sm:pb-24 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <img
             src={emblem}
@@ -207,7 +207,7 @@ function Index() {
       </section>
 
       {/* COUNTDOWN */}
-      <section className="px-6 py-24 sm:py-28">
+      <section className="px-4 py-16 sm:px-6 sm:py-28">
         <div className="text-center mb-12">
           <h2 className="font-script text-5xl sm:text-6xl text-gold-deep">Days Left</h2>
           <GoldDivider className="mt-6" />
@@ -216,10 +216,10 @@ function Index() {
       </section>
 
       {/* VENUE */}
-      <section className="px-6 py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-20">
         <div className="text-center mb-10">
           <p className="text-xs tracking-[0.5em] uppercase text-gold/80">The Venue</p>
-          <h2 className="mt-4 font-display text-2xl sm:text-3xl text-gold-deep">
+          <h2 className="mt-4 font-display text-xl sm:text-3xl text-gold-deep">
             Swaneset Bay Resort &amp; Country Club
           </h2>
           <GoldDivider className="mt-6" />
@@ -240,7 +240,7 @@ function Index() {
           </div>
 
           <div className="mt-8 text-center space-y-3">
-            <p className="font-display text-xl text-gold-deep">16651 Rannie Road</p>
+            <p className="font-display text-lg sm:text-xl text-gold-deep">16651 Rannie Road</p>
             <p className="text-foreground/70 text-sm tracking-wider">
               Pitt Meadows, British Columbia, Canada
             </p>
@@ -249,7 +249,7 @@ function Index() {
                 href="https://maps.google.com/?q=Swaneset+Bay+Resort+%26+Country+Club+Pitt+Meadows"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+                className="inline-block px-6 py-2.5 sm:px-10 sm:py-3 border border-[var(--gold)] text-gold text-[10px] sm:text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
               >
                 Open in Maps
               </a>
@@ -259,20 +259,20 @@ function Index() {
       </section>
 
       {/* ADULTS ONLY */}
-      <section className="px-6 py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-xl text-center border-y border-[var(--gold-soft)]/40 py-12">
           <p className="text-base">❖</p>
           <p className="mt-4 text-xs tracking-[0.5em] uppercase text-gold">
             An Adults-Only Celebration
           </p>
-          <p className="mt-6 font-display italic text-foreground/70 leading-relaxed">
+          <p className="mt-6 font-display italic text-sm sm:text-base text-foreground/70 leading-relaxed">
             Although we adore your little ones, we kindly request this be an adult only event.
           </p>
         </div>
       </section>
 
       {/* RSVP POSTCARD */}
-      <section className="px-6 py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-20">
         <div className="text-center mb-10">
           <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Kindly Respond</p>
           <p className="mt-2 font-arabic text-base text-gold/70">نتشرف بحضوركم</p>
@@ -281,7 +281,7 @@ function Index() {
 
         <div className="mx-auto max-w-2xl bg-[var(--cream)] border border-[var(--gold-soft)]/50 shadow-[var(--shadow-card)] relative">
           <div className="absolute inset-3 border border-[var(--gold-soft)]/40 pointer-events-none" />
-          <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-6 p-12 sm:p-16 items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-4 p-8 sm:gap-6 sm:p-16 items-center">
             <div className="text-center sm:text-right space-y-2">
               <p className="font-script text-3xl sm:text-4xl text-gold-deep">RSVP</p>
               <p className="text-xs tracking-[0.3em] uppercase text-gold/70">Mohammad & Tala</p>
@@ -306,7 +306,7 @@ function Index() {
       </section>
 
       {/* TRAVEL */}
-      <section className="px-6 py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-20">
         <div className="text-center mb-10">
           <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Travel &amp; Stay</p>
           <p className="mt-4 text-xs tracking-[0.5em] uppercase text-gold/80">Recommendations</p>
@@ -316,17 +316,17 @@ function Index() {
         <div className="mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-10">
           {/* Left — Hilton */}
           <div className="text-center space-y-4">
-            <h3 className="font-display text-xl sm:text-2xl text-gold-deep">
+            <h3 className="font-display text-lg sm:text-2xl text-gold-deep">
               Hilton Vancouver Downtown
             </h3>
-            <p className="font-display text-lg text-gold-deep">433 Robson St</p>
-            <p className="text-foreground/70 text-sm tracking-wider">Vancouver, BC V6B 6L9, Canada</p>
+            <p className="font-display text-base sm:text-lg text-gold-deep">433 Robson St</p>
+            <p className="text-foreground/70 text-xs sm:text-sm tracking-wider">Vancouver, BC V6B 6L9, Canada</p>
             <div className="pt-4">
               <a
                 href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=YVRWGHH&arrivalDate=2026-10-29&departureDate=2026-11-02&groupCode=wedg&room1NumAdults=2&displayCurrency=USD"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+                className="inline-block px-6 py-2.5 sm:px-10 sm:py-3 border border-[var(--gold)] text-gold text-[10px] sm:text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
               >
                 Book Hotel
               </a>
@@ -335,17 +335,17 @@ function Index() {
 
           {/* Right — Civic Hotel */}
           <div className="text-center space-y-4">
-            <h3 className="font-display text-xl sm:text-2xl text-gold-deep">
+            <h3 className="font-display text-lg sm:text-2xl text-gold-deep">
               Civic Hotel, Autograph Collection
             </h3>
-            <p className="font-display text-lg text-gold-deep">13475 Central Ave</p>
-            <p className="text-foreground/70 text-sm tracking-wider">Surrey, BC V3T 0L8, Canada</p>
+            <p className="font-display text-base sm:text-lg text-gold-deep">13475 Central Ave</p>
+            <p className="text-foreground/70 text-xs sm:text-sm tracking-wider">Surrey, BC V3T 0L8, Canada</p>
             <div className="pt-4">
               <a
                 href="https://www.marriott.com/search/findHotels.mi?fromToDate_submit=11/02/2026&fromDate=10/29/2026&toDate=11/02/2026&toDateDefaultFormat=11/02/2026&fromDateDefaultFormat=10/29/2026&flexibleDateSearch=false&t-start=2026-10-29&t-end=2026-11-02&lengthOfStay=4&childrenCountBox=0+Children+Per+Room&childrenCount=0&clusterCode=none&isAdvanceSearch=false&isNGSF=false&recordsPerPage=40&destinationAddress.type=Hotel+Name&destinationAddress.latitude=49.1905961&isInternalSearch=true&vsInitialRequest=false&searchType=InCity&destinationAddress.stateProvince=BC&searchRadius=50&singleSearchAutoSuggest=Unmatched&destinationAddress.placeId=ChIJVWLXWNPZhVQRirPHIr95Shs&for-hotels-nearme=Near&destinationAddress.country=CA&collapseAccordian=is-hidden&singleSearch=true&destinationAddress.secondaryText=BC,+CA&destinationAddress.city=Surrey&destinationAddress.mainText=Surrey&isTransient=true&destinationAddress.longitude=-122.8483246&initialRequest=true&flexibleDateSearchRateDisplay=false&isSearch=true&isRateCalendar=true&destinationAddress.destination=Civic+Hotel,+Autograph+Collection,+Central+Avenue,+Surrey,+BC,+Canada&isHideFlexibleDateCalendar=false&roomCountBox=1+Room&roomCount=1&guestCountBox=1+Adult+Per+Room&numAdultsPerRoom=2&deviceType=desktop-web&view=list&destinationAddress.location=Civic+Hotel,+Autograph+Collection,+Central+Avenue,+Surrey,+BC,+Canada&fromToDate=06/20/2026&isFlexibleDatesOptionSelected=false&numberOfRooms=1&showFullPrice=false&currency=USD&priceRangeIndex=0#/10/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+                className="inline-block px-6 py-2.5 sm:px-10 sm:py-3 border border-[var(--gold)] text-gold text-[10px] sm:text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
               >
                 Book Hotel
               </a>
@@ -355,7 +355,7 @@ function Index() {
       </section>
 
       {/* REGISTRY */}
-      <section className="px-6 py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-20">
         <div className="text-center mb-10">
           <p className="text-xs tracking-[0.5em] uppercase text-gold/80">Gift Registry</p>
           <GoldDivider className="mt-6" />
@@ -370,7 +370,7 @@ function Index() {
               href="https://registry.theknot.com/mohammad-alzeir-tala-chaaban-october-2026-canada/74842309"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-10 py-3 border border-[var(--gold)] text-gold text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
+              className="inline-block px-6 py-2.5 sm:px-10 sm:py-3 border border-[var(--gold)] text-gold text-[10px] sm:text-xs tracking-[0.4em] uppercase hover:bg-[var(--gold)] hover:text-[var(--ivory)] transition-all duration-500"
             >
               View Registry
             </a>
@@ -379,7 +379,7 @@ function Index() {
       </section>
 
       {/* GALLERY */}
-      <section ref={slideshowRef} className="px-6 py-20">
+      <section ref={slideshowRef} className="px-4 py-12 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-md">
           <div className="relative">
             <img
@@ -388,8 +388,8 @@ function Index() {
               aria-hidden
               className="absolute inset-0 w-full h-full object-fill pointer-events-none"
             />
-            <div className="relative p-14 sm:p-16 aspect-[3/4] flex items-center justify-center">
-              <div className="w-full h-full relative bg-[var(--ivory)] p-2 sm:p-3 shadow-[0_0_0_1px_var(--gold-soft)]">
+            <div className="relative p-10 sm:p-16 aspect-[3/4] flex items-center justify-center">
+              <div className="w-full h-full relative bg-[var(--ivory)] p-1.5 sm:p-3 shadow-[0_0_0_1px_var(--gold-soft)]">
                 <div className="w-full h-full overflow-hidden relative border border-[var(--gold-soft)]/60">
                 {slideshowImages.map((src, i) => (
                   <img
@@ -407,7 +407,7 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="px-6 py-16 text-center">
+      <footer className="px-4 py-12 sm:px-6 sm:py-16 text-center">
         <img
           src={emblem}
           alt=""
